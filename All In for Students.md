@@ -11,7 +11,7 @@ They will also have access to a class form and a professor for one on one instru
 ## Professional Development
 All In for Student participants will attend regular meet ups to hear from open source professionals on topics that will help equip them for success within tech, corporate culture and open source communities. Topics include: Leveraging employee resource groups, Dealing with microaggressions/being the only one, Ensuring great feedback/performance management, Careers in tech, Developing and owning your personal story, the power of collaboration and networking before and after the job. 
  
-The participants will also receive tangible benefits such as free open source conference registrations, updated professional headshot, assistance with interviewing, resume writing and updating their LinkedIn profiles, and a session on personal finance. 
+The participants will also receive tangible benefits such as free open source conference registrations, updated professional headshot, assistance with interviewing, resume writing and updating their LinkedIn profiles. 
  
 ## 12-week open source projects
 Students will be matched to teams at our corporate partners and complete 12-week projects that directly contribute to or focus on open source communities and projects. Each student will also be paired with two mentors from the corporate partner.
