@@ -25,27 +25,9 @@ The All In community will collaborate and build on research and initiatives that
 
 ## Access
 
-### All In for Students 
+### [All In for Students ](https://github.com/soyetubo/All-In/blob/main/All%20In%20for%20Students.md)
 This is a paid, 12-month program for select college students from underrepresented backgrounds who are often overlooked during the corporate recruitment process. During the program, students will receive professional development training, open source education, a structured 12-week open source project, and ultimately have the opportunity to join one of our corporate partners for a summer internship experience.
 
-#### Open Source Curriculum
-Students will be enrolled in online, self-paced courses that provide them with an introduction to open source.
-- [A Beginner’s Guide to Open Source Development](https://training.linuxfoundation.org/training/beginners-guide-open-source-software-development/)
-- [Introduction to Cloud Infrastructure Technologies](https://training.linuxfoundation.org/training/introduction-to-cloud-infrastructure-technologies/) 
-- [Introduction to DevOps and Site Reliability Engineering](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162/)
-
-They will also have access to a class form and a professor for one on one instruction to assist as they go through the curriculum.
- 
-#### Professional Development
-All In for Student participants will attend regular meet ups to hear from open source professionals on topics that will help equip them for success within tech, corporate culture and open source communities. Topics include: Leveraging employee resource groups, Dealing with microaggressions/being the only one, Ensuring great feedback/performance management, Careers in tech, Developing and owning your personal story, the power of collaboration and networking before and after the job. 
- 
-The participants will also receive tangible benefits such as free open source conference registrations, updated professional headshot, assistance with interviewing, resume writing and updating their LinkedIn profiles, and a session on personal finance. 
- 
-#### 12-week open source projects
-Students will be matched to teams at our corporate partners and complete 12-week projects that directly contribute to or focus on open source communities and projects. Each student will also be paired with two mentors from the corporate partner.
- 
-#### Summer internship experiences
-The goal of All in For Students is to provide students with the knowledge and skills they need to prepare them for summer internship experiences at our corporate partners. 
 
 ### All in for Maintainers
 This program is an immersive program that provides inclusive development and training, and direct program management support to increase diversity within select communities through focused contributor acquisition and contributor retention efforts. Components of this program include, training on unconscious bias that typically shows up in open source communities, accessibility audits, community hospitality, code of conduct analysis, and inclusive language scans and updates. The final program design will be designed with maintainers with insights from the [Open Source DEI Survey](https://www.linuxfoundation.org/press-release/linux-foundation-launches-2021-open-source-diversity-equity-and-inclusion-survey/), the [Maintainers Listening Tour](https://github.com/soyetubo/All-In/blob/main/README.md#maintainers-listening-tour) and the All In for Maintainers pilot.
