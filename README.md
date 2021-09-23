@@ -45,19 +45,19 @@ We will be collecting best practices, lessons learned and stories that highlight
 
 To participate in the Maintainer’s Listening Tour, join us at one of the following conferences to participate in an in-person focus group: 
 
-[Open Source Summit](https://osselc21.sched.com/event/nCpS)
-- Tuesday, September 28
+- [Open Source Summit](https://osselc21.sched.com/event/nCpS)
+  - Tuesday, September 28
 
-[KUBECON and Cloud Native Computing Conference](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
-- Date and Time TBD
+- [KUBECON and Cloud Native Computing Conference](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
+  - Date and Time TBD
 
-[All Things Open](https://2021.allthingsopen.org/)
-- Monday, October 18 
+- [All Things Open](https://2021.allthingsopen.org/)
+  - Monday, October 18 
 
-[Beyond Universe](https://githubuniverse.com/) 
-- Date and Time TBD
+- [Beyond Universe](https://githubuniverse.com/) 
+  - Date and Time TBD
 
-[Submit asynchronous feedback.](link)
+- [Submit asynchronous feedback.](link)
 
 ## Equity
 All In will seek to leverage GitHub’s Corporate Sponsors program which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well.
