@@ -83,7 +83,7 @@ All In will seek to leverage GitHub’s Corporate Sponsors program which allows 
 ## Data
 All In will prioritize consistently gathering and analyzing data that will provide insight into the current state of diversity, equity and inclusion within open source, challenges that need to be addressed and strengths that can be leveraged to take advantage of opportunities to create a more inclusive culture within our communities. We will make informed data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long term impact. 
 
-Our first initiative was to create the Open Source Diversity, Equity and Inclusion Survey and partner with the Linux Foundation to survey across the many platforms communities within the open source ecosystem. Preliminary findings will be released September-November 2012 and the full report will be released in December 2021. 
+Our first initiative was to create the [Open Source Diversity, Equity and Inclusion Survey](https://www.linuxfoundation.org/press-release/linux-foundation-launches-2021-open-source-diversity-equity-and-inclusion-survey/) and partner with the Linux Foundation to survey across the many platforms communities within the open source ecosystem. Preliminary findings will be released September-November 2012 and the full report will be released in December 2021. 
 
 ---
 
