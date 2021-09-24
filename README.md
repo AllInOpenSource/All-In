@@ -9,21 +9,13 @@ All In is a community dedicated to advancing diversity, equity, and inclusion wi
 # Mission
 _All In’s mission is to  **“open source diversity and inclusion”**_ by bringing together corporate partners, industry leaders, researchers, and foundations to create more inclusive open source communities for current and future developers from underrepresented backgrounds and regions.
 
-### Key stakeholders include:
-- DEI Leaders
-- Academia
-- Corporate
-- Foundations
-- Philanthropy
-- Government
-- Social Sector
 
 ---
 
-# Partners
-- GitHub, Fidelity, Red Hat, Cisco, Microsoft, Intel
+# Founding Partners
+- GitHub, Red Hat, Cisco, Fidelity, Microsoft, Intel
 - Shaw University, North Carolina Central University, Clark Atlanta University, Winston Salem State University, Saint Augustine’s University, Huston Tillotson University, University of North Carolina Pembroke
-- Major League Hacking, Linux Foundation, CHAOSS Project, All Things Open Network
+- CHAOSS Project, Linux Foundation, Major League Hacking, All Things Open Network
 
 ---
 
