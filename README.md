@@ -9,7 +9,14 @@ All In is a community dedicated to advancing diversity, equity, and inclusion wi
 # Mission
 _All In’s mission is to  **“open source diversity and inclusion”**_ by bringing together corporate partners, industry leaders, researchers, and foundations to create more inclusive open source communities for current and future developers from underrepresented backgrounds and regions.
 
-![Small_All In Stakeholders](https://user-images.githubusercontent.com/70516588/134222646-c480d2dd-a138-4741-867e-25291481f0db.png)
+### Key stakeholders include:
+- DEI Leaders
+- Academia
+- Corporate
+- Foundations
+- Philanthropy
+- Government
+- Social Sector
 
 ---
 
