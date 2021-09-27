@@ -1,3 +1,5 @@
+<img width="69" alt="{a}@2x" src="https://user-images.githubusercontent.com/70516588/134952030-3c41b607-10f0-4f46-8f2e-85ec3a62bbd1.png">
+
 # All In for Students
 
 ## Open Source Curriculum
