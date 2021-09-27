@@ -74,7 +74,7 @@ Our first initiative was to create the [Open Source Diversity, Equity and Inclus
 
 # Contact Us
 
-#### Email Address: allin@github.com
+#### Email Address: info@allinopensource.org
 
 
 
