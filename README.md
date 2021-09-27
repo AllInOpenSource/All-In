@@ -36,7 +36,8 @@ This is a paid, 12-month program for select college students from underrepresent
 This program is an immersive program that provides inclusive development and training, and direct program management support to increase diversity within select communities through focused contributor acquisition and contributor retention efforts. Components of this program include training on unconscious bias that typically shows up in open source communities, accessibility audits, community hospitality, code of conduct analysis, and inclusive language scans and updates. The final program design will be designed with maintainers with insights from the [Open Source DEI Survey](https://www.linuxfoundation.org/press-release/linux-foundation-launches-2021-open-source-diversity-equity-and-inclusion-survey/), the [Maintainers Listening Tour](https://github.com/soyetubo/All-In/blob/main/README.md#maintainers-listening-tour) and the All In for Maintainers pilot.
 
 ## Community
-## Maintainers Listening Tour
+
+### Maintainers Listening Tour
 The Maintainers Listening Tour is a series of focus groups and individual interviews with maintainers who are interested in attracting and retaining new contributors with diverse backgrounds in an inclusive way. 
 
 We will be collecting best practices, lessons learned, and stories that highlight:
