@@ -58,7 +58,7 @@ To participate in the Maintainer’s Listening Tour, join us at one of the follo
 - [Beyond Universe](https://githubuniverse.com/) 
   - Date and Time TBD
 
-- [Submit asynchronous feedback.](link)
+- [Submit asynchronous feedback.](https://docs.google.com/forms/d/1LBcSbLNWcPCkXuwakPy13subCCv_aXi2ciH5XnOnPJo/edit)
 
 ## Equity
 All In will seek to leverage GitHub’s Corporate Sponsors program which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well.
