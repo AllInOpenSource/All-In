@@ -1,5 +1,5 @@
+<img width="530" alt="{all in}@2x (1)" src="https://user-images.githubusercontent.com/70516588/134951921-f530bb68-3190-4ab4-b86a-1c96b1d62cab.png">
 
-![All In Logo](https://user-images.githubusercontent.com/70516588/134222074-ba65245b-1779-4f02-9d13-58c744d00ddf.png)
 
 # About Us
 All In is a community dedicated to advancing diversity, equity, and inclusion within open source.  
