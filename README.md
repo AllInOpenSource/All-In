@@ -4,7 +4,7 @@
 # About Us
 All In is a community dedicated to advancing diversity, equity, and inclusion within open source.  
 
-### [Join the community](https://github.com/soyetubo/All-In/blob/main/All%20In%20New%20Partners.md)
+### [Join the community](https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/edit)
 
 ---
 
@@ -19,7 +19,7 @@ _All In’s mission is to  **“open source diversity and inclusion”**_ by bri
 - **University**: Shaw University, North Carolina Central University, Clark Atlanta University, Winston Salem State University, Saint Augustine’s University, Huston Tillotson University, University of North Carolina Pembroke
 - **Organizations**: CHAOSS Project, Linux Foundation, Major League Hacking, All Things Open Network
 
-### [Interested in becoming a partner?](https://github.com/soyetubo/All-In/blob/main/All%20In%20New%20Partners.md)
+### [Interested in becoming a partner?](https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/edit)
 
 ---
 
