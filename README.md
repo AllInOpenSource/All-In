@@ -17,6 +17,8 @@ _All In’s mission is to  **“open source diversity and inclusion”**_ by bri
 - Shaw University, North Carolina Central University, Clark Atlanta University, Winston Salem State University, Saint Augustine’s University, Huston Tillotson University, University of North Carolina Pembroke
 - CHAOSS Project, Linux Foundation, Major League Hacking, All Things Open Network
 
+### [Interested in becoming a partner?](https://github.com/soyetubo/All-In/blob/main/All%20In%20New%20Partners.md)
+
 ---
 
 # Goals
