@@ -79,4 +79,3 @@ Our first initiative was to create the [Open Source Diversity, Equity and Inclus
 
 _If you are having difficulty accessing any of the above links, please contact info@allinopensource.org for further information on how you can submit your feedback to our team._
 
-
