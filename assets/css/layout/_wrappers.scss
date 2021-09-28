@@ -1,0 +1,31 @@
+
+// ---------------------------------------------------------------------
+//  Wrapper Styles (Horizontal Spacing)
+// ---------------------------------------------------------------------
+
+.wrapper {
+    @include wrapper;
+}
+
+.wrapper-wide {
+    @include wrapper;
+    max-width: 1440px;
+}
+
+.wrapper-full {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+// ----------------------------------------
+// Extensions
+// ----------------------------------------
+
+.wrapper-thin {
+    @include wrapper;
+    max-width: 720px;
+}
+.wrapper-md {
+    @include wrapper;
+    max-width: 760px;
+}

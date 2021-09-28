@@ -1,0 +1,20 @@
+
+<footer class="footer">
+  <div class="container-xl p-responsive f6 py-4 d-sm-flex flex-justify-between flex-row-reverse flex-items-center">
+    <ul class="list-style-none d-flex flex-items-center mb-3 mb-sm-0 lh-condensed-ultra social-icons">
+      <li>{Access / Community / Equity / Data}</li>
+    </ul>
+    <ul class="list-style-none d-flex text-gray">
+      <li class="mr-3">
+        © <span id="year"></span> GitHub All In.
+      </li>
+    </ul>
+  </div>
+  <script>
+      var date = new Date().getFullYear(),
+      year = document.getElementById('year');
+      if(year) {
+          document.getElementById('year').innerHTML = date;
+      }
+  </script>
+</footer>

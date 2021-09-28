@@ -1,0 +1,192 @@
+// ---------------------------------------------------------------------
+//  One Offs
+// ---------------------------------------------------------------------
+
+
+// ----------------------------------------
+// Share list
+// ----------------------------------------
+.site-share {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  @include start-at($large) {
+    justify-content: flex-end;
+  }
+
+  a {
+    margin: 0 12px;
+    border-radius: 50%;
+    border: 1px solid #D1D5DA;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity $trans;
+
+    img {
+      height: 18px;
+    }
+
+    &:hover {
+      opacity: 0.5;
+
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// ----------------------------------------
+//
+// ----------------------------------------
+
+hr.dark {
+  border-color: $black;
+}
+
+// .js-page-section {
+//   padding-top: 80px;
+//
+//   @include start-at($header-breakpoint) {
+//       padding-top: 120px;
+//   }
+// }
+
+.label {
+  font-weight: bold;
+  font-size: 12px;
+  padding: 5px 8px 4px;
+  position: relative;
+  border-radius: 3px;
+  color: $white;
+  z-index: 1;
+  margin-left: 8px;
+
+  &:before,
+  &:after {
+    content: '';
+    border-radius: 3px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    background: var(--color-scale-green-5);
+    z-index: -1;
+  }
+
+  &:after {
+    top: 2px;
+    background: #22863A;
+    z-index: -2;
+  }
+}
+
+
+.video-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  &:after {
+    padding-top: 56.25%;
+    display: block;
+    content: '';
+  }
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+
+// ----------------------------------------
+// Checklist
+// ----------------------------------------
+
+.checklist {
+  font-size: 18px;
+  color: blue !important;
+
+  li {
+    position: relative;
+    color: var(--color-scale-gray-5);
+    padding-left: 30px;
+
+    svg {
+      position: absolute;
+      width: 15px;
+      height: 20px;
+      top: 2px;
+      left: 0;
+      fill: var(--color-scale-green-5);
+    }
+
+    + li {
+      margin-top: 16px;
+    }
+  }
+}
+
+
+
+// ----------------------------------------
+// Tool tip
+// ----------------------------------------
+
+.tooltip {
+  position: relative;
+
+  svg {
+    vertical-align: super;
+    color: var(--color-scale-gray-5);
+  }
+
+  &:after {
+    content: "*Formerly Open Source for Good";
+    position: absolute;
+    bottom: calc(100% + 8px);
+    right: 12px;
+    background: var(--color-scale-gray-5);
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 12px;
+    width: 220px;
+    color: var(--color-scale-gray-1);
+    display: none;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    right: 36px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid var(--color-scale-gray-5);
+    display: none;
+
+  }
+
+  &:hover {
+
+    &:before,
+    &:after {
+      display: block;
+    }
+  }
+}

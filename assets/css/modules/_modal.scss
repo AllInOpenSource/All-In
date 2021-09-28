@@ -1,0 +1,124 @@
+// ---------------------------------------------------------------------
+//  Modal
+// ---------------------------------------------------------------------
+
+
+.modal-img {
+  transition: opacity $trans;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+*[data-modal] {
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modal-wrap {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  z-index: 2000;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity $trans;
+
+  &#register {
+    z-index: 2001;
+  }
+
+  .screen {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    background: rgba(black, 0.85);
+
+    &:hover {
+      cursor: crosshair;
+    }
+  }
+
+  &.is-active {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+// ----------------------------------------
+// Modal Inner
+// ----------------------------------------
+
+.modal {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 3px;
+  width: 100%;
+  height: 100%;
+  min-height: 260px;
+  overflow: auto;
+  background: $black;
+  color: $white;
+  padding: 24px 36px;
+
+  form {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  @include start-at($medium) {
+    padding: 36px 40px;
+    //max-height: calc(100% - 72px);
+  }
+
+
+  .button--lg {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+body.modal-is-active {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+// ----------------------------------------
+// Modal Close
+// ----------------------------------------
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 24px;
+  z-index: 6;
+  cursor: pointer;
+  transition: opacity $trans;
+
+	svg {
+		fill: $white;
+	}
+
+  &:hover  {
+    opacity: 0.6;
+  }
+}

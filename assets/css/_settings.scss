@@ -1,0 +1,74 @@
+// ---------------------------------------------------------------------
+//  SCSS Settings
+// ---------------------------------------------------------------------
+
+
+// ----------------------------------------
+// Fonts
+// ----------------------------------------
+
+// 300 | 400 | 500 | 600 | 700
+$sans-serif: 'alliance', mono, sans-serif;
+
+// 300 | 400 | 500 | 700
+$mono: 'sf-mono', mono, sans-serif;
+
+
+// ----------------------------------------
+// Font Size/ Line Height
+// ----------------------------------------
+$main-font: $mono;
+$base-font-size: 18px;
+$base-line-height: 1.5;
+
+
+// ----------------------------------------
+// Colors
+// ----------------------------------------
+
+$brand: #06F395;
+
+$black: #000000;
+$white: #ffffff;
+
+
+$error: #FF3333;
+
+
+// ----------------------------------------
+// Breakpoints
+// ----------------------------------------
+
+$xlarge: 1280px;
+$large: 1012px;
+$medium: 800px;
+$small: 544px;
+
+@mixin start-at($device-width) {
+  @media (min-width: $device-width) {
+    @content;
+  }
+}
+
+@mixin stop-at($device-width) {
+  @media (max-width: $device-width - 1) {
+    @content;
+  }
+}
+
+
+// ----------------------------------------
+// Global Variables
+// ----------------------------------------
+
+
+$header-breakpoint: $medium;
+
+$transition-speed: 0.4s;
+$transition: $transition-speed ease;
+// cuz I no type good
+$trans: $transition-speed ease;
+
+$wrapper-percentage: 92%;
+$wrapper-width: 1260px;
+$wrapper-padding: (100% - $wrapper-percentage) / 2;

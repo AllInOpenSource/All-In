@@ -1,0 +1,108 @@
+// ---------------------------------------------------------------------
+//  Hero
+// ---------------------------------------------------------------------
+
+body.home {
+  background: $black url('../img/hero.png') top center / 100% auto no-repeat;
+
+
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 140px 0;
+
+  p {
+  //  color: var(--color-scale-gray-4);
+  }
+
+
+  @include start-at($medium) {
+    padding: 180px 0;
+    min-height: 608px;
+  }
+}
+
+.hero-side {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  display: none;
+
+  @include start-at(1400px) {
+    display: block;
+  }
+}
+
+.hero--dark {
+  background: $black;
+  color: $white;
+}
+
+.hero__content {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  max-width: 836px;
+
+  p {
+    max-width: 1113px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.hero__pattern {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: -1;
+}
+
+.hero__ft {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate3d(-50%, -24px, 0);
+  text-align: center;
+  width: 200px;
+  color: $white;
+
+
+  .h6 {
+    margin-bottom: 0;
+  }
+
+  svg {
+    display: block;
+    margin: 8px auto 0;
+    fill: $white;
+    width: 12px;
+  }
+}
+
+.dots-lg {
+  position: absolute;
+  transform: translate3d(0, -50%, 0);
+  z-index: 2;
+  width: 100px;
+  left: -20px;
+
+
+  @include start-at($medium) {
+    left: 7.5%;
+    transform: translate3d(0, -50%, 0);
+    z-index: 2;
+    width: 160px;
+  }
+}
+
+
+// ----------------------------------------
+//
+// ----------------------------------------

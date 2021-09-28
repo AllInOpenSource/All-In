@@ -1,0 +1,547 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+.impact {
+  position: relative;
+  background: $black;
+  padding: 120px 0 200px;
+  color: $white;
+  overflow: hidden;
+
+  @include start-at($large) {
+    padding: 180px 0 290px;
+  }
+}
+
+.impact__hd {
+  * {
+    max-width: 600px;
+  }
+}
+
+
+.impact__hd,
+.impact__ft {
+  // * {
+  //   max-width: 600px;
+  // }
+
+  @include start-at($small) {
+    padding-left: 60px;
+  }
+  @include start-at($medium) {
+    padding-left: 88px;
+  }
+  @include start-at($large) {
+    padding-left: 200px;
+  }
+}
+
+.quote {
+  * {
+  //  max-width: 492px;
+  }
+  .h1 {
+    line-height: 1;
+    max-height: 44px;
+  }
+
+  p {
+    color: $white;
+
+    @include start-at($large) {
+
+    }
+  }
+
+  figure {
+    margin-top: 12px;
+    width: 48px;
+    height: 48px;
+    min-width: 48px;
+    overflow: hidden;
+    border-radius: 50%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.impact__bd {
+  text-align: center;
+
+  @include start-at($medium) {
+    text-align: left;
+  }
+}
+
+.impact__top {
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+.impact__bottom {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  max-width: 343px;
+  width: 20%;
+  pointer-events: none;
+}
+
+.impact__top-dots {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 343px;
+  width: 20%;
+  opacity: 0;
+  z-index: 3;
+  transition: opacity 1s ease, transform 1.4s ease-in-out;
+  transform: translate3d(-40%, 0, 0);
+
+  &.in-view {
+    transition-delay: 0.4s;
+    opacity: .4;
+    transform: translate3d(0, 0, 0);
+  }
+
+  &:hover,
+  &.in-view:hover {
+    opacity: 1;
+  }
+}
+.impact__bottom-dots {
+  position: absolute;
+  bottom: 24px;
+  right: 0;
+  max-width: 680px;
+  width: 40%;
+
+  opacity: 0;
+  transition: opacity 1s ease, transform 1.4s ease-in-out;
+  transform: translate3d(40%, 0, 0);
+
+  &.in-view {
+    transition-delay: 0.4s;
+    opacity: .4;
+    transform: translate3d(0, 0, 0);
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  @include start-at($medium) {
+    bottom: 100px;
+  }
+}
+
+
+
+// ----------------------------------------
+// tech for good
+// ----------------------------------------
+
+.img-right-funk {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 60px;
+
+  @include start-at($large) {
+    margin-bottom: 94px;
+    min-height: 400px;
+  }
+}
+
+.img-right-funk__img {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  // &:after {
+  //   content: '';
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 2;
+  //   display: block;
+  //   background: url('../img/direction/io-1.svg') center / cover no-repeat;
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  // }
+
+  img:not(.overlay) {
+    height: 140%;
+  }
+
+  .overlay {
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    z-index: 2;
+    display: block;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    max-width: 1000%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include start-at($large) {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    max-height: 680px;
+    right: 0;
+    top: 0;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    // img:not(.overlay) {
+    //   height: 140%;
+    //   margin-top: -20%;
+    // }
+  }
+}
+
+.img-right-funk__content {
+  padding: 48px 0;
+
+  @include start-at($large) {
+    padding: 94px 0;
+    width: 50%;
+    padding-right: 24px;
+    max-width: 640px;
+
+  }
+}
+
+
+.img-right-funk--alt {
+  overflow: hidden;
+
+  .shapes-top {
+    position: absolute;
+    top: -40px;
+    left: -50%;
+    width: 280%;
+    z-index: 2;
+    max-width: 2000%;
+
+    @include start-at($large) {
+      width: 100%;
+      left: 0;
+    }
+  }
+
+  .img-right-funk__img {
+    &:after {
+      display: none;
+    }
+    @include start-at($large) {
+      width: 44%;
+    }
+  }
+
+  .img-right-funk__content {
+
+    @include start-at($large) {
+      position: relative;
+      z-index: 2;
+      background: $white;
+      width: 68%;
+      padding: 280px 0 140px;
+      max-width: 820px;
+
+      p {
+        max-width: 640px;
+      }
+    }
+  }
+}
+
+
+.img-right-funk--flip {
+  overflow: hidden;
+
+  .img-right-funk__img {
+    &:after {
+      display: none;
+    }
+
+    img {
+      object-fit: cover;
+      width: auto;
+      height: auto;
+    }
+
+    @include start-at($large) {
+      width: 34%;
+      left: 0;
+    }
+
+    @include start-at($xlarge) {
+      width: 48%;
+    }
+  }
+
+  .img-right-funk__content {
+
+    @include start-at($large) {
+      padding: 68px 0;
+      width: 70%;
+      margin-left: auto;
+      padding-left: 24px;
+      max-width: 640px;
+    }
+
+    @include start-at($xlarge) {
+      padding: 68px 0;
+      width: 50%;
+      margin-left: auto;
+      padding-left: 24px;
+      max-width: 640px;
+    }
+  }
+}
+
+// ----------------------------------------
+// Employee giving
+// ----------------------------------------
+
+.employee-giving {
+  padding: 60px 0;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content:'';
+    @include cover-parent;
+    z-index: -2;
+    background: url('../img/direction/dots-pattern.svg') top left / 22px repeat;
+    opacity: 0;
+    transition: opacity 1s linear;
+  }
+
+  @include start-at($large) {
+    padding: 80px 0;
+  }
+
+  &.in-view {
+    &:after {
+      transition-delay: 0.5s;
+      opacity: 1;
+    }
+  }
+}
+
+.employee-giving__content {
+  background: $white;
+  width: 100%;
+  max-width: 820px;
+  padding: 16px 24px;
+  margin: 0 auto;
+  
+
+  @include start-at($large) {
+    padding: 48px 60px;
+  }
+
+  h2, h4, p {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+.employee-giving__content--wide {
+  max-width: 1436px;
+}
+
+
+// ----------------------------------------
+// Highlighted programs
+// ----------------------------------------
+
+.highlighted-programs {
+  margin: 140px 0;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  // max-width: 1800px;
+  // margin: 0 auto;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 228px;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    background: url('../img/direction/dots-pattern.svg') top left / 22px repeat;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 1s linear;
+
+    @include start-at(1258px) {
+      left: auto;
+      right: 1258px;
+      width: 100%;
+    }
+  }
+
+  &.in-view {
+    &:after {
+      transition-delay: 0.5s;
+      opacity: 0.2;
+
+      @include start-at(1258px) {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include start-at($large) {
+    margin: 180px 0;
+  }
+}
+
+.hp-content {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+
+  figure {
+    position: relative;
+    overflow: hidden;
+  }
+
+  div {
+    padding: 36px $wrapper-padding 72px;
+  }
+
+  @include start-at($medium) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1258px;
+
+    &.ml-auto {
+      align-items: flex-end;
+      figure {
+        order: 2;
+      }
+      div {
+        order: 1;
+      }
+    }
+
+    figure {
+      flex-grow: 1;
+    }
+    div {
+      width: 480px;
+      min-width: 480px;
+      padding: 90px 48px;
+    }
+  }
+
+}
+
+
+// ----------------------------------------
+// Latest Insights
+// ----------------------------------------
+
+#lastest-insights {
+  .border-bottom {
+    border-color: $black !important;
+  }
+}
+
+.shapes-section {
+  position: relative;
+  padding: 80px 0;
+  z-index: 1;
+  background: $black;
+  overflow: hidden;
+
+  @include start-at($large) {
+    padding: 160px 0;
+  }
+
+  .wrapper-thin {
+    position: relative;
+    z-index: 3;
+    max-width: 820px;
+
+    @include start-at($medium) {
+      width: 80%;
+    }
+    @include start-at($large) {
+      width: 94%;
+    }
+  }
+
+  .wrapper-wide, .wrapper {
+    position: relative;
+    z-index: 3;
+  }
+}
+
+.shapes-section--short-btm {
+  padding: 80px 0 40px;
+
+  @include start-at($large) {
+    padding: 140px 0 100px;
+  }
+}
+
+.shapes-section__bg {
+  position: absolute;
+  z-index: 2;
+  top: -3px;
+  left: 0;
+}
+
+.shapes-section__bgbtm {
+  position: absolute;
+  z-index: 2;
+  bottom: -3px;
+  left: 0;
+}
+
+
+
+.program-list {
+
+  figure {
+    position: relative;
+    overflow: hidden;
+    height: 0;
+    width: 100%;
+    padding-bottom: 58%;
+    margin-bottom: 16px;
+
+    img, iframe {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+  }
+}

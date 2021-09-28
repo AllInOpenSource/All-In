@@ -1,0 +1,376 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+
+.hero--insights {
+
+  > img {
+    position: absolute;
+    bottom: -4px;
+    width: 33%;
+  }
+  .left-img {
+    left: 0;
+    max-width: 224px;
+  }
+
+  .right-img {
+    right: 0;
+    max-width: 416px;
+  }
+}
+
+// ----------------------------------------
+// nav
+// ----------------------------------------
+
+.insights-nav {
+  width: 100%;
+  background: $white;
+  z-index: 7;
+  position: relative;
+  padding: 16px 0;
+  transition: top $trans;
+  display: none;
+
+  @include start-at($header-breakpoint) {
+    z-index: 11;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    min-height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  a {
+    font-weight: 600;
+    position: relative;
+    padding: 6px 0;
+
+    &:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 15%;
+			width: 70%;
+			height: 2px;
+			display: block;
+			transform: scaleX(0);
+			transform-origin: center;
+			background: $black;
+			transition: transform $trans;
+		}
+
+    &.is-active,
+    &:hover {
+			&:after {
+				transform: scaleX(1);
+			}
+    }
+  }
+}
+
+
+body.scrolling-up {
+  .insights-nav {
+    top: $header-height;
+  }
+}
+
+
+
+// ----------------------------------------
+// Tag list
+// ----------------------------------------
+
+.tag-list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  li {
+    margin: 0 12px 16px 0;
+
+    @include start-at($large) {
+      margin: 0 20px 16px 0;
+    }
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: auto;
+    border: 1px solid $black;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: color $trans, background $trans;
+
+    font-size: 12px;
+    padding: 6px 16px;
+
+    @include start-at($large) {
+      font-size: 16px;
+      padding: 8px 24px;
+    }
+
+    &:hover {
+      color: $white;
+      background: $black;
+    }
+
+    &.is-active {
+      color: $white;
+      background: $black;
+    }
+  }
+}
+
+
+// ----------------------------------------
+// Insight list
+// ----------------------------------------
+
+.insight-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  > * {
+    width: 100%;
+    margin-bottom: 36px;
+
+    &.spacer {
+      margin-bottom: 0;
+    }
+
+    @include start-at($medium) {
+      width: calc(50% - 16px);
+    }
+    @include start-at($large) {
+      width: calc(33% - 16px);
+    }
+    @include start-at($xlarge) {
+      width: calc(33% - 24px);
+    }
+  }
+}
+
+.insight-list.insight-list--sm > * {
+  @include start-at($large) {
+    width: calc(25% - 16px);
+  }
+  @include start-at($xlarge) {
+    width: calc(25% - 24px);
+  }
+}
+
+.js-filtered-list {
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    content: '';
+    width: 36px;
+    height: 36px;
+    top: 120px;
+    left: calc(50% - 18px);
+    background: url('../img/svgs/sync.svg') center / cover no-repeat;
+    position: absolute;
+    transition: transform 2s ease-in-out, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .insight-list {
+    opacity: 1;
+    transition: opacity $trans;
+  }
+
+  &.is-thinking {
+
+    &:after {
+      opacity: 1;
+      transform: rotate(-720deg);
+    }
+
+    .insight-list {
+      opacity: 0.2;
+    }
+  }
+
+  &.is-filtered {
+    .insight-preview {
+      display: none;
+
+      &.has-active-filter {
+        display: block;
+      }
+    }
+  }
+}
+
+// ----------------------------------------
+// Preview
+// ----------------------------------------
+
+.insight-preview {
+  display: block;
+  position: relative;
+  padding-bottom: 48px;
+
+  .date {
+    color: var(--color-scale-gray-5);
+  }
+
+  .shapes-section & {
+    p {
+      color: var(--color-scale-gray-4);
+    }
+
+    .icon-link {
+      color: $white;
+    }
+  }
+
+
+  > figure {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56%;
+    margin-bottom: 24px;
+    overflow: hidden;
+
+    img {
+      position: absolute;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: $black;
+    transition: transform $trans;
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  .icon-link {
+    position: absolute;
+    bottom: 12px;
+    left: 0;
+  }
+
+  &:hover {
+
+    &:after {
+      transform: scaleY(4);
+    }
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 16px;
+
+
+  span {
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--color-text-secondary);
+    display: inline-block !important;
+  }
+
+  p {
+    font-size: 14px !important;
+    font-weight: 500;
+    color: $black;
+    margin: 0 !important;
+    line-height: .8;
+  }
+
+  figure {
+    position: relative;
+    z-index: 1;
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 8px;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+
+    + figure {
+      margin-left: -18px;
+    }
+  }
+}
+
+.authors .author {
+  margin-bottom: 16px;
+}
+@include start-at($small) {
+.authors {
+    display: flex;
+    align-items: flex-start;
+
+    .author {
+      flex-grow: 1;
+      flex-basis: 0;
+      margin-bottom: 0;
+    }
+
+    .author + .author {
+      margin-left: 24px;
+    }
+  }
+}
+
+.insight__tags {
+
+  &p {
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &span {
+
+  }
+
+
+  span + span {
+    &:before {
+      content: ' • ';
+    }
+  }
+}

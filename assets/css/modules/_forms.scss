@@ -1,0 +1,163 @@
+// ---------------------------------------------------------------------
+//  Form Styles (Gravity Forms)
+// ---------------------------------------------------------------------
+
+#subscribe {
+  transition: background $trans;
+
+  .wrapper {
+    min-height: 188px;
+  }
+}
+
+
+#mce-responses {
+  max-width: 530px;
+}
+
+
+
+.form-body {
+  max-width: 544px;
+  width: 100%;
+  margin: 24px 0 0;
+}
+
+div.mce_inline_error {
+  display: none;
+  background: transparent !important;
+  color: var(--color-scale-red-4) !important;
+  font-size: 11px !important;
+  font-weight: 400 !important;
+  position: absolute;
+  top: 100%;
+  margin: 0 !important;
+  padding: 2px 0 !important;
+}
+
+
+
+#mce-success-response {
+  color: var(--color-scale-green-5) !important;
+}
+
+.response#mce-error-response {
+  font-size: 11px;
+  margin-top: 8px;
+  color: var(--color-scale-red-4);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+.response#mce-success-response {
+  font-size: 14px;
+  margin-top: 8px;
+  color: var(--color-scale-green-5);
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+
+.field-group {
+  display: block;
+  flex-grow: 1;
+  position: relative;
+  margin-bottom: 12px;
+
+  label {
+    font-family: $sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+
+.subscribe-form {
+  button {
+
+    @include btn;
+    width: 240px;
+    min-width: 240px !important;
+    max-width: 240px;
+
+    height: 56px;
+    
+    padding: 0;
+    margin-top: 36px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  input {
+    appearance: none;
+    font-family: $sans-serif;
+    display: block;
+    text-align: left;
+    flex-grow: 1;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+    border-radius: 0;
+    border-bottom: 1px solid var(--color-scale-gray-6);
+    height: 56px;
+    color: var(--color-scale-gray-2);
+    background: transparent;
+    transition: border-color $trans;
+    margin-bottom: 24px;
+
+    &:focus {
+      outline: none;
+      border-color: var(--color-scale-gray-5);
+    }
+
+    &.mce_inline_error {
+      border-color: var(--color-scale-red-4) !important;
+    }
+  }
+}
+
+
+// ----------------------------------------
+// Placeholders
+// ----------------------------------------
+
+input::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--color-scale-gray-4);
+  transition: opacity $trans;
+}
+input:focus::-webkit-input-placeholder {
+  opacity: 0.3;
+}
+input:-moz-placeholder {
+  color: #959DA5;
+  transition: opacity $trans;
+}
+input:focus:-moz-placeholder {
+  opacity: 0.3;
+}
+input::-moz-placeholder {
+  color: #959DA5;
+  transition: opacity $trans;
+}
+input:focus::-moz-placeholder {
+  opacity: 0.3;
+}
+input:-ms-input-placeholder {
+  color: #959DA5;
+  transition: opacity $trans;
+}
+input:focus:-ms-input-placeholder {
+  opacity: 0.3;
+}
