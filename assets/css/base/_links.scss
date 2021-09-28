@@ -12,7 +12,7 @@
 
   font-size: 14px;
   font-weight: 600;
-  padding: 13px 31px 15px;
+  padding: 13px 12px 15px;
   min-width: 240px;
 
   overflow: hidden;
@@ -23,6 +23,8 @@
   color: $white;
   -webkit-transition: background $trans, border-color $trans, color $trans;
   transition: background $trans, border-color $trans, color $trans;
+
+
 
   &:before,
   &:after {
@@ -43,11 +45,13 @@
 
   @include start-at($xlarge) {
     font-size: 16px;
+    padding: 13px 32px 15px;
   }
 
   span {
     transform: translate3d(0,0,0);
     z-index: 2;
+    white-space: nowrap;
   }
 
   svg {
