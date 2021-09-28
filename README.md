@@ -64,7 +64,7 @@ To participate in the Maintainer’s Listening Tour, join us at one of the follo
 - [To submit your feedback online click here.](https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo/edit)
 
 ## Equity
-All In will seek to leverage GitHub’s [Corporate Sponsors](https://github.com/sponsors) program which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well. 
+All In will seek to leverage [GitHub Sponsors](https://github.com/sponsors) which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well. 
 
 ## Data
 All In will prioritize consistently gathering and analyzing data that will provide insight into the current state of diversity, equity, and inclusion within open source, challenges that need to be addressed and strengths that can be leveraged to take advantage of opportunities to create a more inclusive culture within our communities. We will make informed data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long term impact. 
