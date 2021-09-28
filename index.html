@@ -1,0 +1,67 @@
+---
+layout: default
+id: home
+---
+
+
+  <div class="hero">
+    <div class="wrapper-wide">
+      <div class="hero__content">
+        <p class="h1 text-white" data-animate-in="fade" data-animate-in-delay="110">A community dedicated to advancing diversity, equity, and inclusion within open source. </p>
+
+        <div class="mt-6">
+          <a class="button mr-3" href="https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo" target="_blank">
+            <span>Apply Today</span>
+            {% octicon arrow-right height:16 %}
+          </a>
+
+          <a class="button" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0" target="_blank">
+            <span>Become a partner</span>
+            {% octicon arrow-right height:16 %}
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <img class="hero-side" src="{{ '/assets/img/side-imgs.png' | relative_url }}" alt="" />
+
+  <section>
+    <div class="wrapper py-6 my-6 text-white">
+      <div class="d-md-flex pt-6">
+        <div class="col-12 col-md-6 mb-4 mb-md-0 pr-md-3 pr-lg-4" data-animate-in="up" data-animate-in-delay="110">
+          <p class="h2">Our missions is to “open source diversity and inclusion.”</p>
+        </div>
+        <div class="col-12 col-md-6 pl-md-3 pl-lg-4" data-animate-in="up" data-animate-in-delay="110">
+          <p>Currently, diversity and inclusion within open source is being approached in the same way that software development used to be. Most efforts are fragmented, only address part of the challenges, and critically, are not openly shared.</p>
+          <p>We will bring together corporate partners, industry leaders, researchers, and foundations, and build upon existing research and initiatives, to create a more inclusive open source for developers everywhere.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrapper py-6 my-6 text-white">
+      <div class="d-md-flex">
+        <div class="col-12 col-md-6 mb-4 mb-md-0 pr-md-2" data-animate-in="up" data-animate-in-delay="110">
+          <a class="modal-img d-inline-block m-0" href="https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo" target="_blank">
+            <img src="{{ '/assets/img/students.svg' | relative_url }}" alt="students icon" />
+          </a>
+        </div>
+
+
+        <div class="col-12 col-md-6 pl-md-2" data-animate-in="up" data-animate-in-delay="110">
+          <a class="modal-img d-inline-block m-0" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0" target="_blank">
+            <img src="{{ '/assets/img/partners.svg' | relative_url }}" alt="partners icon" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include students.html %}
+  {% include partners.html %}

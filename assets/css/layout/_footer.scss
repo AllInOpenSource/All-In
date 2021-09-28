@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------
+//  Site Footer Styles
+// ---------------------------------------------------------------------
+
+.footer {
+  background: $black;
+  color: $white;
+  border-top: 1px solid #2F3138;
+
+  ul a {
+    color: var(--color-scale-gray-4);
+    transition: color $trans;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
+
+.bg-gray-light {
+  background: #24292E;
+  color: var(--color-scale-gray-4);
+}

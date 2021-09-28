@@ -1,0 +1,25 @@
+{
+  "name": "allin.github.com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Home of All In",
+  "main": "index.js",
+  "scripts": {
+    "start": "bundle exec jekyll serve --incremental",
+    "test": "npx stylelint 'assets/**/*.scss' --config .github/linters/.stylelintrc --ignore-path .github/linters/.stylelintignore"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/github/socialimpact.github.com.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/github/socialimpact.github.com/issues"
+  },
+  "homepage": "https://socialimpact.github.com",
+  "dependencies": {
+    "@primer/css": "^16.0.0",
+    "@primer/octicons": "^11.1.0"
+  }
+}

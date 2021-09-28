@@ -1,0 +1,11 @@
+#!/bin/sh
+
+set -e
+
+export PATH=/usr/share/rbenv/shims:$PATH
+
+if [ "$(uname)" != "Darwin" ]; then
+  export RBENV_VERSION=2.1.7-github
+fi
+
+bundle

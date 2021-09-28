@@ -1,0 +1,59 @@
+// A rounded corner box containing a label "open" or "closed"
+
+// Default 32px
+// Small 24px
+
+.state, // TODO: Deprecate
+.State {
+  display: inline-block;
+  // stylelint-disable-next-line primer/spacing
+  padding: 5px 12px;
+  font-size: $body-font-size;
+  font-weight: $font-weight-semibold;
+  // stylelint-disable-next-line primer/typography
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  // stylelint-disable-next-line primer/borders
+  border-radius: 2em;
+}
+
+.state, // TODO: Deprecate
+.State,
+.State--draft {
+  color: var(--color-pr-state-draft-text);
+  background-color: var(--color-pr-state-draft-bg);
+  border: $border-width $border-style var(--color-pr-state-draft-border);
+}
+
+.State--open {
+  color: var(--color-pr-state-open-text);
+  background-color: var(--color-pr-state-open-bg);
+  border-color: var(--color-pr-state-open-border);
+}
+
+.State--merged {
+  color: var(--color-pr-state-merged-text);
+  background-color: var(--color-pr-state-merged-bg);
+  border-color: var(--color-pr-state-merged-border);
+}
+
+.State--closed {
+  color: var(--color-pr-state-closed-text);
+  background-color: var(--color-pr-state-closed-bg);
+  border-color: var(--color-pr-state-closed-border);
+}
+
+// Small
+
+.State--small {
+  // stylelint-disable-next-line primer/spacing
+  padding: 0 10px;
+  font-size: $font-size-small;
+  // stylelint-disable-next-line primer/typography
+  line-height: $size-3;
+
+  .octicon {
+    width: 1em; // Ensures different icons don't change State indicator width
+  }
+}

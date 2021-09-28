@@ -1,0 +1,519 @@
+// ---------------------------------------------------------------------
+//  Global Header Styles
+// ---------------------------------------------------------------------
+
+$header-height: 64px;
+
+body {
+	padding-top: $header-height;
+}
+
+.site-header {
+  position: absolute;
+	display: block;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  top: 0;
+	transition: opacity $trans;
+
+	@include stop-at($header-breakpoint) {
+		background: $black;
+	}
+
+	&.is-sticky {
+		opacity: 0;
+
+		&.scrolling-up {
+			//background: $black;
+			opacity: 1;
+		}
+	}
+}
+
+body {
+  &.is-sticky {
+		.site-header {
+    	margin-top: 0;
+			opacity: 0;
+
+	  }
+	}
+	&.scrolling-up {
+		.site-header {
+			//background: $black;
+			opacity: 1;
+	  }
+	}
+}
+
+.site-header > .container-wide {
+  padding: 16px $wrapper-padding;
+  height: $header-height;
+	//background: $black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include start-at(1600px) {
+    padding: 16px 72px;
+  }
+}
+
+
+// ----------------------------------------
+// Logo Styles
+// ----------------------------------------
+
+$max-logo-width: 168px;
+
+.site-branding {
+  width: $max-logo-width;
+  padding-right: 12px;
+
+  a {
+    display: block;
+    max-width: 136px;
+    width: 100%;
+
+    @include start-at($large) {
+      max-width: $max-logo-width;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  @include start-at($header-breakpoint) {
+    width: 40%;
+    min-width: 40%;
+  }
+}
+
+
+// ----------------------------------------
+// Desktop Navigation
+// ----------------------------------------
+
+.desktop-navigation {
+  flex-grow: 1;
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include stop-at($header-breakpoint) {
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+		display: none;
+  }
+
+  .octicon-mail {
+    transform: translate3d(0, 1px, 0);
+  }
+
+  li {
+    margin-left: 14px;
+
+    @include stop-at($header-breakpoint) {
+      margin: 0 14px;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    @include start-at(1600px) {
+      margin-left: 24px;
+    }
+  }
+
+  .has-sub-nav > div,
+  a:not(.button) {
+		position: relative;
+    font-size: 14px;
+    color: $black;
+		font-family: $sans-serif;
+    font-weight: 600;
+    display: flex;
+		align-items: center;
+		justify-content: flex-end;
+    padding: 12px 4px;
+    transition: color $trans;
+    position: relative;
+    text-decoration: none;
+
+		// &:after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	bottom: 4px;
+		// 	left: 15%;
+		// 	width: 70%;
+		// 	height: 1px;
+		// 	display: block;
+		// 	transform: scaleX(0);
+		// 	transform-origin: center;
+		// 	background: linear-gradient(90deg, rgba(121,184,255,1) 23%, rgba(190,245,202,1) 100%);;
+		// 	transition: transform $trans;
+		// }
+
+    @include  start-at(1600px) {
+      font-size: 16px;
+    }
+
+    svg {
+      width: 16px;
+      min-width: 16px;
+      fill: currentColor;
+			margin-left: 4px;
+			transform: translate3d(0, 2px, 0);
+			transition: transform $trans;
+    }
+
+    &:hover {
+      color: var(--color-scale-gray-8);
+
+			svg {
+				transform: translate3d(3px, 2px, 0);
+			}
+
+			&:after {
+				transform: scaleX(1);
+			}
+    }
+  }
+
+  a.has-icon {
+    &:after {
+      display: none;
+    }
+  }
+
+  li.is-active,
+  li.current-menu-item {
+    a {
+      color: $white;
+      text-decoration-color: $white;
+
+      &:after {
+        transform: scaleX(1);
+      }
+    }
+  }
+}
+
+
+// ----------------------------------------
+// utility
+// ----------------------------------------
+
+.site-header__utility {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  .has-sub-nav {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+
+    &.mr-3 {
+      .sub-nav {
+        width: 200px;
+      }
+    }
+  }
+
+  @include start-at($header-breakpoint) {
+    display: none;
+    width: 50%;
+  }
+
+  @include start-at($large) {
+    width: 20%;
+  }
+}
+
+// ----------------------------------------
+// Slide out Panel
+// ----------------------------------------
+
+.navigation-drawer {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  background: rgba($black, 0.96);
+  z-index: 10;
+  bottom: $header-height;
+  top: $header-height;
+  padding-bottom: $header-height;
+  overflow-x: hidden;
+  overflow-y: auto;
+  //opacity: 0;
+  pointer-events: none;
+  transition: transform $trans, opacity $trans;
+  transform: translate3d(100%, 0, 0);
+
+  @include start-at($header-breakpoint) {
+    max-width: 432px;
+  }
+
+  @include start-at($header-breakpoint) {
+    display: none !important;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  > div {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 32px;
+
+    @include start-at($medium) {
+      padding: 0 44px;
+    }
+
+    @include start-at($large) {
+      padding: 0 52px;
+    }
+    @include start-at($xlarge) {
+      padding: 0 68px;
+    }
+    @include start-at(1600px) {
+      padding: 0 72px;
+    }
+
+    .btn {
+      margin: 48px 0;
+    }
+  }
+
+  hr {
+    background: $border;
+  }
+
+  .menu-is-active & {
+    opacity: 1;
+    pointer-events: inherit;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.mobile-navigation {
+  text-align: right;
+  padding: 40px 0;
+
+  a {
+    font-size: 16px;
+    font-weight: 500;
+    color: $white;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 4px 0;
+    transition: color $trans;
+
+    &:hover {
+      color: var(--color-scale-gray-5);
+    }
+
+    svg {
+      fill: currentColor;
+      margin-right: 8px;
+    }
+  }
+
+  li {
+    margin-bottom: 12px;
+  }
+
+  li.is-active,
+  li.products li.is-active,
+  li.products.is-active,
+  li.current-menu-item {
+    a {
+      color: $white;
+    }
+  }
+}
+
+
+// ----------------------------------------
+// Menu Is Open
+// ----------------------------------------
+.menu-is-active {
+  overflow: hidden;
+
+  .menu-mask {
+    display: block;
+    position: absolute;
+    z-index: 8;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 1;
+    background: rgba(0,0,0,0.4);
+  }
+}
+
+
+
+
+// ----------------------------------------
+// Sub Menu
+// ----------------------------------------
+
+.has-sub-nav {
+  position: relative;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg, img {
+      margin: 4px 0 0 8px !important;
+    }
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .sub-nav {
+      display: block;
+      visibility: visible;
+    }
+  }
+  &:focus,
+  &.is-active {
+    .sub-nav {
+      display: block;
+      visibility: visible;
+    }
+  }
+  > a:focus {
+    + .sub-nav {
+      display: block;
+      visibility: visible;
+    }
+  }
+}
+
+.site-header.is-focused {
+  .sub-nav {
+    visibility: visible;
+  }
+  .navigation-drawer {
+    opacity: 1;
+    pointer-events: inherit;
+  }
+}
+
+.sub-nav {
+  position: absolute;
+  background: #161D27;
+  padding: 24px 18px;
+  width: 220px;
+  text-align: left;
+  left: 0;
+  //transform: translate3d(-50%, 0, 0);
+  top: 100%;
+  border-radius: 0 0 2px 2px;
+  //display: none;
+  visibility: hidden;
+
+  &.is-active {
+    visibility: visible;
+    background: red;
+  }
+
+  &:focus,
+  &:hover {
+    visibility: visible;
+  }
+
+  li + li {
+    margin: 8px 0 0 0!important;
+  }
+
+  a {
+    display: block;
+    height: auto !important;
+    justify-content: flex-start !important;
+    padding: 8px 4px;
+    color: $white;
+    transition: opacity $trans;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+
+
+// ----------------------------------------
+// Sub Menu
+// ----------------------------------------
+
+.burger {
+  position: relative;
+  width: 40px;
+  height: 40px;
+	display: block;
+
+  img {
+    width: 24px;
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    transition: opacity 0.4s ease;
+  }
+  .open {
+    opacity: 0;
+
+    img {
+      width: 16px;
+      margin: 0 auto;
+    }
+  }
+  .closed {
+    opacity: 1;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+
+  .menu-is-active & {
+    .open {
+      opacity: 1;
+    }
+    .closed {
+      opacity: 0;
+    }
+  }
+}

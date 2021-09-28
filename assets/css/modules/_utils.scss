@@ -1,0 +1,130 @@
+// ---------------------------------------------------------------------
+//  Utility Classes
+// ---------------------------------------------------------------------
+
+
+.has-accent {
+
+  &:after {
+    content: "";
+    width: 100px;
+    height: 2px;
+    display: block;
+    //background: $brand;
+    margin: 20px auto;
+  }
+}
+
+.has-accent-left {
+  display: flex;
+
+  &:before {
+    content: "";
+    height: 100px;
+    width: 3px;
+    display: block;
+    background: var(--color-scale-gray-5);
+    margin: 0 24px 0 0;
+
+    @include start-at($medium) {
+      margin-right: 36px;
+    }
+  }
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+
+// ----------------------------------------
+// Text
+// ----------------------------------------
+
+.text-center {
+  text-align: center;
+
+  p, img, .text-thin {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.text-thin {
+  max-width: 560px;
+}
+
+.text-brand {
+  color: var(--color-scale-gray-5);
+}
+
+.text-white {
+  color: $white;
+
+  * {
+    color: $white;
+  }
+
+  p a {
+    color: var(--color-scale-blue-4);
+  }
+}
+
+.text-light {
+  color: var(--color-scale-gray-5);
+}
+
+.text-black {
+  color: $black;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+
+// ----------------------------------------
+// Backgrounds
+// ----------------------------------------
+
+.bg-brand {
+  background: var(--color-scale-gray-5);
+}
+
+.bg-black {
+  background: $black;
+  color: $white;
+
+  .button {
+    color: $black !important;
+
+    &:before {
+      background: $white;
+    }
+    &:after {
+      opacity: 0;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 100%), #1B1F23;
+      z-index: -1;
+    }
+  }
+}
+
+.bg-light {
+  background: var(--color-scale-gray-1);
+}
+
+.hr-dark {
+  border-color: $black;
+}
+
+
+
+
+.sr-only,
+.screen-reader-text {
+  @include visually-hidden;
+}

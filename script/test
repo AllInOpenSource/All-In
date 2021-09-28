@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+if [ "$SKIP_BOOTSTRAP" == "" ]
+then
+  script/bootstrap
+fi
+
+bundle exec jekyll build
