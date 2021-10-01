@@ -3,8 +3,12 @@
 // ---------------------------------------------------------------------
 
 body.home {
-  background: $black url('../img/hero.png') top center / 100% auto no-repeat;
+  background: $black url('../img/hero.jpg') top center / auto 800px no-repeat;
 
+
+  @include start-at($large) {
+    background: $black url('../img/hero.jpg') top center / 100% auto no-repeat;
+  }
 
 }
 
