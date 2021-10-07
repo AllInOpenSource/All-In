@@ -52,14 +52,11 @@ To participate in the Maintainer’s Listening Tour, join us at one of the follo
 - [Open Source Summit](https://osselc21.sched.com/event/nCpS)
   - Tuesday, September 28
 
-- [KUBECON and Cloud Native Computing Conference](https://events.linuxfoundation.org/kubecon-cloudnativecon-north-america/)
-  - Date and Time TBD
-
 - [All Things Open](https://2021.allthingsopen.org/)
   - Monday, October 18 
 
 - [Beyond Universe](https://githubuniverse.com/) 
-  - Date and Time TBD
+  - Monday, October 25 and October 26
 
 - [To submit your feedback online click here.](https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo/edit)
 
