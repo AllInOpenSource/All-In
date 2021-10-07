@@ -56,7 +56,7 @@ To participate in the Maintainer’s Listening Tour, join us at one of the follo
   - Monday, October 18 
 
 - [Beyond Universe](https://githubuniverse.com/) 
-  - Monday, October 25 and October 26
+  - Monday, October 25 and Tuesday, October 26
 
 - [To submit your feedback online click here.](https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo/edit)
 
