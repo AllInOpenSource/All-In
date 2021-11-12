@@ -20,14 +20,60 @@
   font-weight: 300;
   font-style: normal;
 }
-//
-// @font-face {
-//   font-family: 'fira';
-//   src: url('../fonts/fira/FiraCode-Medium.woff2') format('woff2'),
-//   url('../fonts/fira/FiraCode-Medium.woff') format('woff');
-//   font-weight: 500;
-//   font-style: normal;
-// }
+
+@font-face {
+  font-family: 'Noe';
+  src: url('../fonts/NoeDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/NoeDisplay-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-regularita-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/TheinhardtMed.otf') format('otf');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-light-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-lightita-webfont.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-bold-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/theinhardt-boldita-webfont.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
 // @font-face {
 //   font-family: 'fira';
 //   src: url('../fonts/fira/FiraCode-Light.woff2') format('woff2'),

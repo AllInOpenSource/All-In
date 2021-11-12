@@ -1,0 +1,79 @@
+---
+layout: default
+id: community
+permalink: /community-programs/
+title: Community Programs
+---
+
+<div class="hero">
+  <div class="hero__content text-white">
+    <div class="wrapper">
+      <div class="d-md-flex flex-items-center text-center text-left-md">
+        <div class="col-12 col-md-4 col-lg-5 mb-6 mb-md-0 px-md-6" data-animate-in="up">
+          <img class="mx-auto col-4 col-md-12" style="max-width: 248px;" src="/assets/img/direction/community-icon.svg"  alt="community icon" />
+        </div>
+        <div class="col-12 col-md-8 col-lg-6" data-animate-in="up">
+          <h1 class="h5">{ Community Programs }</h1>
+          <h1 class="h2">All-in for maintainers</h1>
+          <p class="p-lg">Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Etiam porta sem malesuada magna mollis euismod.</p>
+          <div class="d-flex flex-wrap btns mt-6">
+            <a class="btn btn--scroll btn--full-sm mr-3" href="#about-the-program" data-scroll-to="about-the-program">
+              <span>About the program</span>
+              {% include arrow.html %}
+            </a>
+              <a class="btn btn--scroll btn--full-sm " href="#about-the-tour" data-scroll-to="about-the-tour">
+              <span>About the tour</span>
+              {% include arrow.html %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bg-white bg-pattern-right py-7" id="about-the-program">
+  <div class="wrapper d-md-flex flex-items-center">
+    <div class="col-12 col-md-4 col-lg-5" style="order: 3;" data-animate-in="up">
+      <img class="mx-auto col-10" src="{{ '/assets/img/direction/maintainer.png' | relative_url }}" alt="person holding coffee working" />
+    </div>
+    <div class="col-12 col-md-7 pr-md-6" data-animate-in="up">
+      <h2 class="h3 mb-4">About the Maintainers Program</h2>
+      <p>An immersive program that provides training and technical support to maintainers who want to drive diversity and inclusion in their communities. Participants will receive programming and tools for attracting and maintaining contributors of diverse backgrounds, including accessibility audits, community hospitality techniques, code of conduct analysis, and inclusive language scans and updates. </p>
+
+      <a class="btn mt-6" href="/become-a-maintainer/">
+        <span>Apply for program</span>
+        {% include arrow.html %}
+      </a>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="bg-static py-8" id="about-the-tour">
+  <div class="wrapper d-md-flex flex-justify-between">
+    <div class="col-12 col-md-6 col-lg-5 pr-md-4 mb-6 mb-md-0" data-animate-in="up">
+      {% include video.html %}
+    </div>
+    <div class="col-12 col-md-6 pl-md-4 pl-lg-2 text-white" data-animate-in="up">
+      <div class="rte">
+        <h2 class="h3 mb-4">Maintainers Listening Tour</h2>
+        <p>The Maintainers Listening Tour is a series of focus groups and individual interviews with maintainers who are interested in attracting and retaining new contributors with diverse backgrounds.</p>
+        <p>We will be collecting best practices, lessons learned, and stories that highlight:</p>
+        <ul>
+          <li>What maintainers are doing to advance diversity, inclusion, and belonging within their communities</li>
+          <li>What is working well</li>
+          <li>What is not working well</li>
+          <li>Challenges that may be prohibiting them from creating a culture of inclusion within their communities </li>
+        </ul>
+      </div>
+
+      <a class="btn mt-6" href="" target="_blank">
+        <span>Share feedback</span>
+        {% include arrow.html %}
+      </a>
+    </div>
+  </div>
+</div>

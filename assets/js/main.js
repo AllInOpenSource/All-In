@@ -59,18 +59,6 @@ APP.Global = {
       document.body.classList.add('localhost');
     }
 
-    var reportBtn = $('#download-report');
-    reportBtnText = $('#download-report > span'),
-    reportNote = $('#downloaded-note');
-    reportBtn.click(function(){
-      setTimeout(function(){
-        reportBtn.addClass('btn--completed');
-        reportBtnText.html('Downloaded');
-        reportNote.removeClass('d-none');
-      }, 1000);
-
-    });
-
     $('.js-menu-trigger').click(function(e){
       e.preventDefault();
       if( $('body').hasClass('menu-is-active') ) {
@@ -109,31 +97,6 @@ APP.Global = {
         //}
       }
     });
-
-    // report redirect
-
-    let hash = window.location.hash.replace('#', '');
-    $(document).ready(function(){
-      if(hash === 'report') {
-        window.location.href = '/insights/#research';
-      }
-    });
-
-    var morePosts = $('.js-show-more');
-    var allPosts = $('#more-posts');
-    allPosts.hide();
-    morePosts.click(function(e){
-      e.preventDefault();
-      allPosts.slideDown(400);
-      morePosts.parent('.text-center').hide();
-      // $(window).trigger('resize');
-      // $(window).trigger('scroll');
-
-      $('html, body').animate({
-        scrollTop: allPosts.offset().top - 148
-      }, 1000);
-    });
-
   }
 }
 
@@ -150,13 +113,12 @@ APP.Header = {
 
     var lastScrollTop = 0;
 
-    document.addEventListener("scroll", function(){
+    function checkHPos(){
       if (w.scrollTop() >= 120) {
         b.addClass('is-sticky');
       } else {
         b.removeClass('is-sticky');
       }
-
       var st = window.pageYOffset || document.documentElement.scrollTop;
       if (st > lastScrollTop){
         if( b.hasClass('scrolling-up') ){
@@ -169,8 +131,14 @@ APP.Header = {
         }
       }
       lastScrollTop = st <= 0 ? 0 : st;
-    }, false);
+    }
 
+    document.addEventListener("scroll", function(){
+      checkHPos();
+    }, false);
+    window.onload = function(event) {
+      checkHPos();
+    };
 
     $('.js-menu-trigger').click(function(e){
       e.preventDefault();
@@ -180,27 +148,6 @@ APP.Header = {
         $('body').addClass('menu-is-open');
       }
     });
-
-
-    // var playBtn = document.getElementById('arctic-vault-video-play');
-    // if( playBtn ) {
-    //     video = document.getElementById('arctic-vault-video');
-    //     bd = document.body;
-    //     safari = false;
-    //
-    //     if(document.body.classList.contains('browser-safari')){
-    //         safari = true;
-    //     }
-    //
-    // 	playBtn.onclick = function() {
-    //         if(safari){
-    //             video.webkitRequestFullscreen();
-    //         } else {
-    //             video.requestFullscreen();
-    //         }
-    //         video.play();
-    // 	}
-    // }
   }
 }
 

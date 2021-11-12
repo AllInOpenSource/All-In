@@ -2,6 +2,11 @@
 //  Utility Classes
 // ---------------------------------------------------------------------
 
+.text-left-md {
+  @include start-at($medium) {
+    text-align: left !important;
+  }
+}
 
 .has-accent {
 
@@ -61,11 +66,7 @@
 .text-white {
   color: $white;
 
-  * {
-    color: $white;
-  }
-
-  p a {
+  p {
     color: var(--color-scale-blue-4);
   }
 }
@@ -93,6 +94,56 @@
 
 .bg-brand {
   background: var(--color-scale-gray-5);
+}
+
+.bg-white {
+  background-color: $white;
+  color: $black;
+}
+
+.bg-pattern {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+
+  .bg-pattern__img {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-width: 10000%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 260%;
+    left: -80%;
+
+    @include start-at($small) {
+      width: 200%;
+      left: -50%;
+    }
+
+    @include start-at($large) {
+      width: 140%;
+      left: -20%;
+    }
+
+    @include start-at($xlarge) {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+.bg-pattern-right {
+  position: relative;
+  z-index: 1;
+  background: $white url('../img/direction/pattern-right.svg') 90% top / auto 100% no-repeat;
+}
+
+.bg-static {
+  background: $gray-darkest url('../img/direction/static.jpg') center / cover no-repeat;
 }
 
 .bg-black {
@@ -127,4 +178,74 @@
 .sr-only,
 .screen-reader-text {
   @include visually-hidden;
+}
+
+
+
+
+$p7s: 60px;
+$p7: 80px;
+
+.py-7 {
+  padding-top: $p7s;
+  padding-bottom: $p7s;
+  @include start-at($medium) {
+    padding-top: $p7;
+    padding-bottom: $p7;
+  }
+}
+.pb-7 {
+  padding-bottom: $p7s;
+  @include start-at($medium) {
+    padding-bottom: $p7;
+  }
+}
+.pt-7 {
+  padding-top: $p7s;
+  @include start-at($medium) {
+    padding-top: $p7;
+  }
+}
+.my-7 {
+  margin-top: $p7s;
+  margin-bottom: $p7s;
+  @include start-at($medium) {
+    margin-top: $p7;
+    margin-bottom: $p7;
+  }
+}
+.mb-7 {
+  margin-bottom: $p7s;
+  @include start-at($medium) {
+    margin-bottom: $p7;
+  }
+}
+.mt-7 {
+  margin-top: $p7s;
+  @include start-at($medium) {
+    margin-top: $p7;
+  }
+}
+
+$p8s: 80px;
+$p8: 140px;
+.py-8 {
+  padding-top: $p8s;
+  padding-bottom: $p8s;
+  @include start-at($medium) {
+    padding-top: $p8;
+    padding-bottom: $p8;
+  }
+}
+.pb-8 {
+  padding-bottom: $p8s;
+  @include start-at($medium) {
+    padding-bottom: $p8;
+  }
+}
+.pt-8 {
+  padding-top: $p8s;
+  @include start-at($medium) {
+    padding-top: $p8;
+  }
 }

@@ -2,57 +2,75 @@
 //  Animate In
 // ---------------------------------------------------------------------
 
-*[data-animate-in="up"] {
-	opacity: 0;
-	transform: translate3d(0, 24px, 0);
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
 
-	&.in-view {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+[data-animate-in="up"] {
+  opacity: 0;
+  transition: opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);
+  transform: scale(.96) translateY(24px);
+
+  &.in-view {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-*[data-animate-in="down"] {
-	opacity: 0;
-	transform: translate3d(0, -24px, 0);
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+[data-animate-in="left"] {
+  opacity: 0;
+  transition: opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);
+  transform: scale(.96) translateX(-24px);
 
-	&.in-view {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  &.in-view {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-*[data-animate-in="fade"] {
-	opacity: 0;
-	transition: opacity 0.4s ease-out;
+[data-animate-in="right"] {
+  opacity: 0;
+  transition: opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);
+  transform: scale(.96) translateX(24px);
 
-	&.in-view {
-		opacity: 1;
-	}
+  &.in-view {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-*[data-animate-in="left"] {
-	opacity: 0;
-	transform: translate3d(-24px, 0, 0);
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-	transition-delay: 0.4s;
+[data-animate-in="down"] {
+  opacity: 0;
+  transition: opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1);
+  transform: scale(.96) translateY(-24px);
 
-	&.in-view {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  &.in-view {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
 }
 
-*[data-animate-in="right"] {
-	opacity: 0;
-	transform: translate3d(24px, 0, 0);
-	transition: transform 0.3s ease-out, opacity 0.3s ease-out;
-	transition-delay: 0.4s;
+[data-animate-in="fade"] {
+  //transform: translate3d(0, 0, 0);
+  opacity: 0;
+  transition: opacity .8s ease-in-out;
 
-	&.in-view {
-		opacity: 1;
-		transform: translate3d(0, 0, 0);
-	}
+  &.in-view {
+    opacity: 1;
+  }
+}
+
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.page-loaded .fade-in,
+.page-loaded.fade-in {
+  opacity: 1;
+}
+
+.isSafari.isTouch [data-animate-in],
+.isSafari.isTouch [data-animate-in="up"] {
+  opacity: 1;
+  transition: none;
+  transform: none;
 }

@@ -9,44 +9,67 @@
 		</div>
 
 		<ul class="desktop-navigation">
-			<li>
-				<a href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
-					<span>Join the Community</span>
-					{% octicon arrow-right height:16 %}
+			<li{% if page.id == 'home' %} class="is-active"{% endif %}>
+				<a href="/">
+					<span>Overview</span>
 				</a>
 			</li>
-			<li>
-				<a href="https://github.com/AllInOpenSource/All-In" target="_blank">
-					<span>Learn More</span>
-					{% octicon arrow-right height:16 %}
+			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+				<a href="/access-programs/">
+					<span>Access Programs</span>
 				</a>
 			</li>
-
+			<li{% if page.id == 'community' %} class="is-active"{% endif %}>
+				<a href="/community-programs/">
+					<span>Community Programs</span>
+				</a>
+			</li>
 		</ul>
 
 		<div class="site-header__utility">
+			<a class="btn-alt" href="/become-a-maintainer/">
+				<div>
+					<span>Apply to Join</span>
+					{% include arrow.html %}
+				</div>
+			</a>
 			<div class="burger js-menu-trigger">
-				<span class="closed"><img src="{{ '/assets/img/svgs/burger.svg' | relative_url }}" alt="menu icon" /></span>
-				<span class="open"><img src="{{ '/assets/img/svgs/close.svg' | relative_url }}" alt="close icon" /></span>
+				<svg class="closed" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M3 4H21V6H3V4ZM9 11H21V13H9V11ZM3 18H21V20H3V18Z" fill="#06F395"/>
+				</svg>
+				<svg class="open" width="24" height="24" viewBox="0 0 24 24">
+					<path d="M12 10.586L16.95 5.63599L18.364 7.04999L13.414 12L18.364 16.95L16.95 18.364L12 13.414L7.04999 18.364L5.63599 16.95L10.586 12L5.63599 7.04999L7.04999 5.63599L12 10.586Z" fill="white" />
+				</svg>
+
 			</div>
 		</div>
 
 		<nav class="navigation-drawer">
 			<div>
 				<ul class="mobile-navigation">
-					<li>
-						<a href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
-							<span>Join the Community</span>
-							{% octicon arrow-right height:16 %}
+					<li{% if page.id == 'home' %} class="is-active"{% endif %}>
+						<a href="/">
+							<span>Overview</span>
 						</a>
 					</li>
-					<li>
-						<a href="https://github.com/AllInOpenSource/All-In" target="_blank">
-							<span>Learn More</span>
-							{% octicon arrow-right height:16 %}
+					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+						<a href="/access-programs/">
+							<span>Access Programs</span>
+						</a>
+					</li>
+					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
+						<a href="/community-programs/">
+							<span>Community Programs</span>
 						</a>
 					</li>
 				</ul>
+
+				<div>
+					<a class="btn" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
+	          <span>Apply to join</span>
+	          {% include arrow.html %}
+	        </a>
+				</div>
 			</div>
 		</nav>
 	</div>

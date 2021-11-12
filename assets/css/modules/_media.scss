@@ -2,6 +2,74 @@
 //  Media Styles
 // ---------------------------------------------------------------------
 
+
+
+.video-wrap,
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+
+  border-radius: 16px;
+
+
+  &.video-playing,
+  &.is-playing {
+    .video-wrap__poster {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+
+  .video-wrapper__poster,
+  video,
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.video-wrap__poster {
+  @include cover-parent;
+  z-index: 2;
+  background: $black;
+
+  &:hover {
+    cursor: pointer;
+
+    img {
+      opacity: 0.6;
+    }
+
+    svg {
+      fill: $brand;
+    }
+  }
+
+  svg {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    fill: $white;
+    transition: fill $trans;
+  }
+
+  > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: opacity $trans;
+  }
+}
+
+
 .img-overlay {
   position: relative;
   overflow: hidden;

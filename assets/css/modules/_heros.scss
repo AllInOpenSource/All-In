@@ -2,15 +2,7 @@
 //  Hero
 // ---------------------------------------------------------------------
 
-body.home {
-  background: $black url('../img/hero.jpg') top center / auto 800px no-repeat;
 
-
-  @include start-at($large) {
-    background: $black url('../img/hero.jpg') top center / 100% auto no-repeat;
-  }
-
-}
 
 .hero {
   position: relative;
@@ -19,28 +11,41 @@ body.home {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 140px 0;
+  padding: 180px 0 48px;
+  background: url('../img/direction/static.jpg') center / cover no-repeat;
 
-  p {
-  //  color: var(--color-scale-gray-4);
+  .btns {
+    justify-content: center;
+
+    @include start-at($medium) {
+      justify-content: flex-start;
+    }
   }
 
-
+  @include stop-at($small) {
+    .btn {
+      width: 100%;
+    }
+  }
   @include start-at($medium) {
-    padding: 180px 0;
+    padding: 120px 0;
     min-height: 608px;
+  }
+
+  @include start-at($xlarge) {
+    padding: 192px 0 140px;
+    min-height: 764px;
   }
 }
 
-.hero-side {
-  position: absolute;
-  right: 0;
-  top: 100px;
-  display: none;
+.hero--video {
+  padding-bottom: 48px;
 
-  @include start-at(1400px) {
-    display: block;
+  @include start-at($large) {
+    padding-bottom: 72px;
   }
+
+
 }
 
 .hero--dark {
@@ -52,7 +57,9 @@ body.home {
   width: 100%;
   position: relative;
   z-index: 1;
-  max-width: 836px;
+  margin: 0 auto;
+
+
 
   p {
     max-width: 1113px;
@@ -61,11 +68,46 @@ body.home {
   }
 }
 
+.hero-content__media {
+  position: relative;
+  max-width: 1032px;
+  margin: 36px auto 0;
+  width: $wrapper-percentage;
+
+  .orb {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+    transform: translate3d(-24px, -36px, 0) rotate(145deg);
+
+    @include start-at($large) {
+      transform: translate3d(-50%, -100%, 0) rotate(145deg);
+    }
+  }
+
+  @include start-at($large) {
+    margin: 48px auto 0;
+  }
+}
+
 .hero__pattern {
   position: absolute;
   bottom: -2px;
   left: 0;
   z-index: -1;
+}
+
+.hero__img {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  img {
+    width: 100%;
+  }
 }
 
 .hero__ft {
@@ -106,6 +148,33 @@ body.home {
   }
 }
 
+.hero__pattern {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  max-width: 10000%;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+
+  width: 260%;
+  left: -80%;
+
+  @include start-at($small) {
+    width: 200%;
+    left: -50%;
+  }
+
+  @include start-at($large) {
+    width: 140%;
+    left: -20%;
+  }
+
+  @include start-at($xlarge) {
+    width: 100%;
+    left: 0;
+  }
+}
 
 // ----------------------------------------
 //

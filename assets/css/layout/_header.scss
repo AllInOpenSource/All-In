@@ -3,60 +3,60 @@
 // ---------------------------------------------------------------------
 
 $header-height: 64px;
-
-body {
-	padding-top: $header-height;
-}
+$header-height-lg: 80px;
 
 .site-header {
-  position: absolute;
-	display: block;
+  position: fixed;
+  display: block;
   z-index: 10;
   width: 100%;
   left: 0;
   top: 0;
-	transition: opacity $trans;
-
-	@include stop-at($header-breakpoint) {
-		background: $black;
-	}
-
-	&.is-sticky {
-		opacity: 0;
-
-		&.scrolling-up {
-			//background: $black;
-			opacity: 1;
-		}
-	}
+  transition: opacity $trans, background $trans;
+  color: $white;
 }
 
 body {
   &.is-sticky {
-		.site-header {
-    	margin-top: 0;
-			opacity: 0;
-
-	  }
-	}
-	&.scrolling-up {
-		.site-header {
-			//background: $black;
-			opacity: 1;
-	  }
-	}
+    .site-header {
+      margin-top: 0;
+      opacity: 0;
+      background: $black;
+      > .container-wide {
+        height: $header-height;
+      }
+    }
+  }
+  &.scrolling-up {
+    .site-header {
+      opacity: 1;
+    }
+  }
 }
 
 .site-header > .container-wide {
-  padding: 16px $wrapper-padding;
-  height: $header-height;
-	//background: $black;
+  padding: 0 $wrapper-padding;
+  height: $header-height-lg;
+  //background: $black;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: height $trans;
 
-  @include start-at(1600px) {
-    padding: 16px 72px;
+  @include start-at($large) {
+    height: $header-height-lg;
+  }
+}
+
+body.is-sticky {
+  .site-header {
+
+  }
+}
+
+body.menu-is-active {
+  .site-header {
+    background: url('../img/direction/static.jpg') center / cover no-repeat;
   }
 }
 
@@ -89,9 +89,13 @@ $max-logo-width: 168px;
     width: 100%;
   }
 
+
   @include start-at($header-breakpoint) {
-    width: 40%;
-    min-width: 40%;
+    width: 25%;
+  }
+
+  @include start-at($large) {
+    width: 20%;
   }
 }
 
@@ -105,17 +109,18 @@ $max-logo-width: 168px;
   width: 80%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
   @include stop-at($header-breakpoint) {
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-		display: none;
+    display: none;
   }
 
-  .octicon-mail {
-    transform: translate3d(0, 1px, 0);
+  @include start-at($header-breakpoint) {
+    width: 50%;
+  }
+
+  @include start-at($large) {
+    width: 60%;
   }
 
   li {
@@ -135,76 +140,87 @@ $max-logo-width: 168px;
   }
 
   .has-sub-nav > div,
-  a:not(.button) {
-		position: relative;
+  a:not(.btn-alt) {
+    position: relative;
     font-size: 14px;
-    color: $black;
-		font-family: $sans-serif;
-    font-weight: 600;
+    color: currentColor;
+    font-family: $sans-serif;
+    font-weight: 700;
     display: flex;
-		align-items: center;
-		justify-content: flex-end;
+    align-items: center;
+    justify-content: flex-end;
     padding: 12px 4px;
     transition: color $trans;
     position: relative;
     text-decoration: none;
 
-		// &:after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	bottom: 4px;
-		// 	left: 15%;
-		// 	width: 70%;
-		// 	height: 1px;
-		// 	display: block;
-		// 	transform: scaleX(0);
-		// 	transform-origin: center;
-		// 	background: linear-gradient(90deg, rgba(121,184,255,1) 23%, rgba(190,245,202,1) 100%);;
-		// 	transition: transform $trans;
-		// }
-
-    @include  start-at(1600px) {
+    @include start-at(1600px) {
       font-size: 16px;
     }
 
-    svg {
-      width: 16px;
-      min-width: 16px;
-      fill: currentColor;
-			margin-left: 4px;
-			transform: translate3d(0, 2px, 0);
-			transition: transform $trans;
-    }
-
-    &:hover {
-      color: var(--color-scale-gray-8);
-
-			svg {
-				transform: translate3d(3px, 2px, 0);
-			}
-
-			&:after {
-				transform: scaleX(1);
-			}
-    }
   }
 
-  a.has-icon {
-    &:after {
-      display: none;
-    }
-  }
-
-  li.is-active,
-  li.current-menu-item {
+  li.is-active {
     a {
       color: $white;
-      text-decoration-color: $white;
 
+      &:before {
+        opacity: 1;
+        transform: translate3d(-6px, 0, 0);
+      }
       &:after {
-        transform: scaleX(1);
+        opacity: 1;
+        transform: translate3d(6px, 0, 0);
       }
     }
+  }
+}
+
+.desktop-navigation a:not(.btn-alt),
+.mobile-navigation a:not(.btn) {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px 4px;
+
+  &:before,
+  &:after {
+    content: '{';
+    color: $brand;
+    display: block;
+    font-weight: 500;
+    opacity: 0;
+    transition: transform $trans, opacity $trans;
+  }
+
+  &:after {
+    content: '}';
+  }
+
+  &:hover {
+    color: var(--color-scale-gray-8);
+
+    &:before {
+      opacity: 1;
+      transform: translate3d(-6px, 0, 0);
+    }
+    &:after {
+      opacity: 1;
+      transform: translate3d(6px, 0, 0);
+    }
+  }
+}
+
+.desktop-navigation li.is-active a:not(.btn-alt),
+.mobile-navigation li.is-active a:not(.btn) {
+  &:before {
+    opacity: 1;
+    transform: translate3d(-6px, 0, 0);
+  }
+  &:after {
+    opacity: 1;
+    transform: translate3d(6px, 0, 0);
   }
 }
 
@@ -217,6 +233,16 @@ $max-logo-width: 168px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+
+  .btn-alt {
+    height: 44px;
+    padding: 0;
+    min-width: 168px;
+
+    @include stop-at($header-breakpoint) {
+      display: none;
+    }
+  }
 
   .has-sub-nav {
     position: relative;
@@ -234,8 +260,7 @@ $max-logo-width: 168px;
   }
 
   @include start-at($header-breakpoint) {
-    display: none;
-    width: 50%;
+    width: 25%;
   }
 
   @include start-at($large) {
@@ -253,13 +278,13 @@ $max-logo-width: 168px;
   width: 100%;
   right: 0;
   background: rgba($black, 0.96);
+  background: url('../img/direction/static.jpg') center / cover no-repeat;
   z-index: 10;
   bottom: $header-height;
   top: $header-height;
   padding-bottom: $header-height;
   overflow-x: hidden;
   overflow-y: auto;
-  //opacity: 0;
   pointer-events: none;
   transition: transform $trans, opacity $trans;
   transform: translate3d(100%, 0, 0);
@@ -278,6 +303,18 @@ $max-logo-width: 168px;
     padding: 0;
     position: absolute;
     width: 1px;
+  }
+
+  &:after {
+    content: '';
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    bottom: 72px;
+    right: -24px;
+    background: url('../img/direction/orb-blue.svg') center / cover no-repeat;
+    z-index: -1;
+    transform: rotate(-45deg);
   }
 
   > div {
@@ -302,6 +339,7 @@ $max-logo-width: 168px;
     }
 
     .btn {
+      width: 100%;
       margin: 48px 0;
     }
   }
@@ -320,20 +358,17 @@ $max-logo-width: 168px;
 .mobile-navigation {
   text-align: right;
   padding: 40px 0;
+  flex-grow: 1;
 
   a {
-    font-size: 16px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 700;
     color: $white;
     display: inline-flex;
     align-items: center;
     justify-content: flex-end;
     padding: 4px 0;
     transition: color $trans;
-
-    &:hover {
-      color: var(--color-scale-gray-5);
-    }
 
     svg {
       fill: currentColor;
@@ -480,10 +515,19 @@ $max-logo-width: 168px;
   position: relative;
   width: 40px;
   height: 40px;
-	display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  img {
-    width: 24px;
+  @include start-at($header-breakpoint) {
+    display: none;
+  }
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
   }
 
   span {

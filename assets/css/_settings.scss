@@ -7,17 +7,20 @@
 // Fonts
 // ----------------------------------------
 
-// 300 | 400 | 500 | 600 | 700
-$sans-serif: 'alliance', mono, sans-serif;
+// 300 | 400 |  500 |700
+$sans-serif: 'theinhardt', mono, sans-serif;
 
 // 300 | 400 | 500 | 700
 $mono: 'sf-mono', mono, sans-serif;
+
+// 700
+$serif: 'Noe', serif;
 
 
 // ----------------------------------------
 // Font Size/ Line Height
 // ----------------------------------------
-$main-font: $mono;
+$main-font: $sans-serif;
 $base-font-size: 18px;
 $base-line-height: 1.5;
 
@@ -29,6 +32,11 @@ $base-line-height: 1.5;
 $brand: #06F395;
 
 $black: #000000;
+
+$border: #121212;
+
+$gray-darkest: #161616;
+
 $white: #ffffff;
 
 
@@ -41,7 +49,7 @@ $error: #FF3333;
 
 $xlarge: 1280px;
 $large: 1012px;
-$medium: 800px;
+$medium: 768px;
 $small: 544px;
 
 @mixin start-at($device-width) {

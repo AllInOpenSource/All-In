@@ -1,0 +1,99 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+body.become-a-partner,
+body.become-a-maintainer {
+  background: $gray-darkest url('../img/direction/static.jpg') center / auto repeat;
+
+  .site-header {
+  //  background: $gray-darkest url('../img/direction/static.jpg') center / cover no-repeat;
+  }
+}
+
+.form-split {
+  min-height: calc(100vh - 150px);
+
+  @include start-at($large) {
+    display: flex;
+    align-items: stretch;
+    min-height: calc(100vh - 80px);
+  }
+}
+
+.form-split__content {
+  color: $white;
+  padding: 180px $wrapper-padding 48px;
+  background: url('../img/direction/pattern-dark.svg') top center / 70% auto  repeat-y;
+
+  .logo-list {
+    > * {
+      width: calc(100% / 2);
+      margin: 20px 0;
+
+      @include start-at($small) {
+        width: calc(100% / 3);
+      }
+
+      @include start-at($medium) {
+        width: calc(100% / 3);
+      }
+    }
+
+    img {
+      filter: grayscale(100%) brightness(0) invert(1);
+    }
+  }
+
+  > * {
+    max-width: 492px;
+    margin: 0 auto;
+  }
+
+  @include start-at($large) {
+    width: 45%;
+    padding: 256px $wrapper-padding 48px;
+
+    > * {
+      max-width: 492px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (min-width: $large) and (min-height: 860px) {
+  .form-split__content > * {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+.form-split__form {
+  background: $white;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  padding: 36px $wrapper-padding 48px;
+
+  @include start-at($large) {
+    width: 55%;
+    padding: 80px $wrapper-padding 120px;
+    background: transparent;
+
+    > * {
+      max-width: 601px;
+    }
+
+    &:after {
+      content: '';
+      @include cover-parent;
+      z-index: -1;
+      background: $white;
+      top: $header-height-lg;
+    }
+  }
+}
+
+// ----------------------------------------
+//
+// ----------------------------------------

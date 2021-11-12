@@ -15,6 +15,9 @@
   max-width: 530px;
 }
 
+form {
+  font-size: 16px;
+}
 
 
 .form-body {
@@ -34,7 +37,6 @@ div.mce_inline_error {
   margin: 0 !important;
   padding: 2px 0 !important;
 }
-
 
 
 #mce-success-response {
@@ -61,68 +63,197 @@ div.mce_inline_error {
   }
 }
 
+// ----------------------------------------
+// Groups and labels
+// ----------------------------------------
 
 .field-group {
   display: block;
   flex-grow: 1;
   position: relative;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
+  width: 100%;
 
   label {
     font-family: $sans-serif;
     font-weight: 700;
     font-size: 16px;
+
+    span {
+      display: block;
+      font-weight: 400;
+    }
   }
 }
 
+.field-group-two {
 
-.subscribe-form {
-  button {
+  @include start-at($medium) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    @include btn;
-    width: 240px;
-    min-width: 240px !important;
-    max-width: 240px;
-
-    height: 56px;
-    
-    padding: 0;
-    margin-top: 36px;
-
-    &:focus {
-      outline: none;
+    > * {
+      width: calc(50% - 18px);
+      max-width: calc(50% - 18px);
+      margin-top: 0 !important;
     }
+
+  }
+}
+
+// ----------------------------------------
+// Inputs
+// ----------------------------------------
+
+input[type="text"],
+input[type="email"],
+textarea {
+  appearance: none;
+  font-family: $sans-serif;
+  display: block;
+  text-align: left;
+  flex-grow: 1;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 400;
+  overflow: hidden;
+  box-shadow: none;
+  border: none;
+  width: 100%;
+  border-radius: 0;
+  border-bottom: 1px solid $border;
+  height: 44px;
+  color: $black;
+  background: transparent;
+  transition: border-color $trans;
+  margin-bottom: 24px;
+
+  &:focus {
+    outline: none;
+    border-color: $gray-darkest;
+  }
+
+  &.mce_inline_error {
+    border-color: $error !important;
+  }
+}
+
+textarea {
+  border: 1px solid $border;
+  min-height: 120px;
+  margin-top: 8px;
+
+}
+
+button[type="submit"],
+input[type="submit"] {
+  margin-top: 36px;
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: none;
+    background: transparent;
+    color: $black;
+  }
+}
+
+// ----------------------------------------
+// Radios & Checkboxes
+// ----------------------------------------
+
+.radio,
+.checkbox {
+  + .radio,
+  + .checkbox {
+    margin-top: 24px;
   }
 
   input {
-    appearance: none;
-    font-family: $sans-serif;
-    display: block;
-    text-align: left;
-    flex-grow: 1;
-    padding: 0;
-    font-size: 16px;
-    font-weight: 400;
-    overflow: hidden;
-    box-shadow: none;
-    border: none;
-    width: 100%;
-    border-radius: 0;
-    border-bottom: 1px solid var(--color-scale-gray-6);
-    height: 56px;
-    color: var(--color-scale-gray-2);
-    background: transparent;
-    transition: border-color $trans;
-    margin-bottom: 24px;
+    @include visually-hidden;
+  }
 
-    &:focus {
-      outline: none;
-      border-color: var(--color-scale-gray-5);
+  label {
+    position: relative;
+    font-weight: 700;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 1;
+
+    b {
+      display: block;
+      margin-bottom: 4px;
     }
 
-    &.mce_inline_error {
-      border-color: var(--color-scale-red-4) !important;
+    span {
+      font-weight: 400;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 24px;
+      min-width: 24px;
+      height: 24px;
+      z-index: 2;
+      border: 1px solid $black;
+      background: transparent;
+      cursor: pointer;
+      margin-right: 16px;
+
+      @include start-at($large) {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      left: 6px;
+      top: 6px;
+      z-index: 3;
+      background: $brand;
+      transform: scale(0);
+      transition: transform .35s cubic-bezier(0.68,-0.55,0.27,1.75);
+      cursor: pointer;
+
+      @include start-at($large) {
+        width: 16px;
+        left: 8px;
+        top: 8px;
+        height: 16px;
+      }
+    }
+  }
+
+  input:checked + label {
+    &:after {
+      transform: scale(1);
+    }
+  }
+}
+
+.radio label:before,
+.radio label:after {
+  border-radius: 50%;
+}
+
+.radio--center label {
+  align-items: center;
+
+  &:before {
+    margin-right: 10px;
   }
 }
 

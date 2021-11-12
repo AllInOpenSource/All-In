@@ -12,35 +12,22 @@
 
   font-size: 14px;
   font-weight: 600;
-  padding: 13px 12px 15px;
+  padding: 15px 12px 13px;
   min-width: 240px;
 
   overflow: hidden;
   background: transparent;
   border-radius: 0;
-  border: 2px solid $white;
-  border-left: none;
-  color: $white;
+  border: 2px solid $brand;
+  background: $brand;
+
+  color: $black;
   -webkit-transition: background $trans, border-color $trans, color $trans;
   transition: background $trans, border-color $trans, color $trans;
 
 
-
-  &:before,
-  &:after {
-    content: '';
-    width: 2px;
-    height: 16px;
-    position: absolute;
-    background: $white;
-    left: 0;
-    top: 0;
-    transition: transform $trans;
-    z-index: -1;
-  }
-  &:after {
-    top: auto;
-    bottom: 0;
+  @include stop-at($small) {
+    width: 100%;
   }
 
   @include start-at($xlarge) {
@@ -57,10 +44,11 @@
   svg {
     position: relative;
     z-index: 2;
+    fill: currentColor;
   }
 
   @include stop-at($small) {
-    &.button--full--sm {
+    &.btn--full--sm {
       width: 100%;
     }
   }
@@ -82,6 +70,10 @@
     fill: currentColor;
     transform: translate3d(0, 2px, 0);
     transition: transform $trans;
+
+    * {
+      fill: currentColor;
+    }
   }
 
   img, svg {
@@ -91,8 +83,8 @@
 
   &:hover {
     cursor: pointer;
-    background: $white;
-    color: $black;
+    background: transparent;
+    color: $brand;
 
     span + svg {
       transform: translate3d(3px, 2px, 0);
@@ -104,21 +96,142 @@
     }
   }
 
-  &:not(.button--sm) {
-    min-width: 160px;
-  }
-
-  &.button--lg {
-    display: flex;
-    width: 330px;
-  }
 }
 
-.button {
+@mixin btn-alt {
+  font-family: $sans-serif;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 600;
+  padding: 13px 12px 15px;
+  min-width: 240px;
+
+  overflow: hidden;
+  border-radius: 0;
+  border: 2px solid $brand;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+
+  color: $brand;
+  transition: background $trans, border-color $trans, color $trans;
+
+  @include start-at($xlarge) {
+    font-size: 16px;
+    padding: 13px 32px 15px;
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  div:before,
+  div:after,
+  &:before,
+  &:after {
+    content: '';
+    width: 2px;
+    height: 30%;
+    position: absolute;
+    background: $brand;
+    left: 0;
+    top: 0;
+    transition: height $trans;
+    z-index: -1;
+  }
+
+  div:before,
+  div:after {
+    left: auto;
+    right: 0;
+  }
+  &:after,
+  div:after {
+    top: auto;
+    bottom: 0;
+  }
+
+  // span {
+  //   transform: translate3d(0,0,0);
+  //   z-index: 2;
+  //   white-space: nowrap;
+  // }
+
+  svg {
+    position: relative;
+    z-index: 2;
+    fill: currentColor;
+    transition: transform $trans;
+
+    * {
+      fill: currentColor;
+      transition: transform $trans;
+    }
+  }
+
+  svg + span,
+  span + svg,
+  img + span,
+  span + img {
+    margin-left: 8px;
+  }
+
+  img, svg {
+    -webkit-transition: transform $trans;
+    transition: transform $trans;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    span + svg {
+      transform: translate3d(3px, 0, 0);
+    }
+
+    &:before,
+    &:after,
+    div:before,
+    div:after {
+      height: 50%;
+    }
+  }
+
+}
+.btn {
   @include btn;
 }
 
-.button--static {
+.btn-alt {
+  @include btn-alt;
+}
+
+
+.btn--scroll {
+  background: transparent;
+  color: $brand;
+
+  svg {
+    display: block;
+    transform-origin: center;
+    transform: translate3d(0, 0, 0) rotate(90deg);
+  }
+
+  &:hover {
+    svg {
+      transform: translate3d(0, 3px, 0) rotate(90deg) !important;
+    }
+  }
+}
+
+.btn--static {
 
   &:hover {
     span + svg {
@@ -128,7 +241,7 @@
 
 }
 
-.button--sm {
+.btn--sm {
   padding: 2px 16px;
   height: 40px;
   min-width: 120px;
@@ -139,13 +252,24 @@
   }
 }
 
-.button--wide {
+.btn--wide {
   width: 100%;
   max-width: 330px;
 }
 
+@include stop-at($small){
+  .btn--full-sm {
+    width: 100%;
+    margin: 0 !important;
 
-.button--spin {
+    + .btn--full-sm {
+      margin: 18px 0 0 !important;
+    }
+  }
+}
+
+
+.btn--spin {
   img, svg {
     width: 12px;
     height: 12px;
@@ -203,20 +327,6 @@
 }
 
 
-.button--outline {
-  background: $white !important;
-  color: $black;
-  border: 1px solid #D1D5DA;
-
-  &:before {
-    background: $white;
-  }
-
-  &:hover {
-    color: $white;
-  }
-}
-
 a:hover {
   .icon-link {
     span + svg {
@@ -232,7 +342,7 @@ a:hover .icon-link.icon-link--static,
   }
 }
 
-.button--white {
+.btn--white {
 
   &:hover {
     color: $white;
@@ -250,7 +360,7 @@ a:hover .icon-link.icon-link--static,
   justify-content: flex-start;
   align-items: center;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 16px;
 
   svg {
     display: block;
@@ -288,7 +398,7 @@ a:hover .icon-link.icon-link--static,
 p a {
   text-decoration: underline;
   transition: opacity $trans;
-  color: inherit;
+  color: #1F44D2;
 
   &:hover {
     opacity: 0.6;

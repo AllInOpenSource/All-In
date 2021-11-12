@@ -2,10 +2,161 @@
 //  One Offs
 // ---------------------------------------------------------------------
 
+// ----------------------------------------
+// Bullet
+// ----------------------------------------
+
+.bullet {
+  position: relative;
+  padding-left: 24px;
+
+  &:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border: 4px solid $brand;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 0;
+  }
+
+  @include start-at($medium) {
+    padding-left: 36px;
+
+    &:before {
+      width: 20px;
+      height: 20px;
+      border: 6px solid $brand;
+      top: 3px;
+    }
+  }
+}
+
+
+// ----------------------------------------
+// Home section
+// ----------------------------------------
+
+$hc-bp: $large;
+
+.home-cray {
+  position: relative;
+  z-index: 5;
+  background: $gray-darkest url('../img/direction/static.jpg') center / cover no-repeat;
+  padding-bottom: 100px;
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include start-at($hc-bp) {
+    padding-bottom: 140px;
+  }
+
+  .home-cray__graph {
+    @include stop-at($hc-bp) {
+      order: 4;
+
+    }
+  }
+
+  .home-cray__text > * {
+    @include stop-at($hc-bp) {
+      order: 2;
+      margin: 24px 0 48px;
+    }
+
+    > * {
+      max-width: 534px;
+      margin-left: auto;
+    }
+  }
+}
+
+.home-cray-img-1 {
+  position: relative;
+  max-width: 429px;
+  padding-bottom: 50px;
+  z-index: 2;
+  transform: translate3d(0, -40px, 0);
+
+
+
+  @include start-at($hc-bp) {
+    transform: translate3d(0, -60px, 0);
+  }
+
+  img:first-child {
+    max-width: 378px;
+    margin-left: 20px;
+
+    @include stop-at(600px) {
+      max-width: calc(100% - 40px);
+    }
+  }
+  .bl {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  .br {
+    position: absolute;
+    top: 60px;
+    right: 0;
+  }
+  .orb {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.home-cray-img-2 {
+  position: relative;
+  max-width: 456px;
+  padding-top: 40px;
+  padding-left: 40px;
+  z-index: 2;
+  margin-left: auto;
+  transform: translate3d(0, -20px, 0);
+
+  @include start-at($hc-bp) {
+
+  }
+
+  img:first-child {
+    max-width: 378px;
+
+  }
+  .bl {
+    position: absolute;
+    top: 100px;
+    left: 0;
+  }
+  .br {
+    position: absolute;
+    top: 100px;
+    right: 0;
+  }
+  .orb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+
+
 
 // ----------------------------------------
 // Share list
 // ----------------------------------------
+
 .site-share {
   display: flex;
   align-items: center;

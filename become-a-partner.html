@@ -1,0 +1,111 @@
+---
+layout: default
+id: become-a-partner
+permalink: /become-a-partner/
+title: Become a partner
+---
+
+<div class="form-split">
+  <div class="form-split__content">
+    <div>
+      <h1 class="h3 mb-6">Become a Partner</h1>
+      <p class="h5">{ Our goal }</p>
+      <p>An immersive program that provides training and technical support to maintainers who want to drive diversity and inclusion in their communities. Participants will receive programming and tools for attracting and maintaining contributors of diverse backgrounds, including accessibility audits, community hospitality techniques, code of conduct analysis, and inclusive language scans and updates. </p>
+
+      <ul class="mt-6 logo-list">
+        <li>
+          <img src="/assets/img/logos/github.svg" alt="GitHub" />
+        </li>
+        <li>
+          <img src="/assets/img/logos/microsoft.svg" alt="Microsoft" />
+        </li>
+        <li>
+          <img src="/assets/img/logos/redhat.svg" alt="Red Hat" />
+        </li>
+        <li>
+          <img src="/assets/img/logos/cisco.svg" alt="Cisco" />
+        </li>
+        <li>
+          <img src="/assets/img/logos/intel.svg" alt="intel" />
+        </li>
+        <li>
+          <img src="/assets/img/logos/fidelity.svg" alt="Fidelity" />
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="form-split__form py-8">
+    <div class="mb-6">
+      <p>All In is a community dedicated to advancing diversity, equity, and inclusion within open source.</p>
+      <p>If you’re an university, organization or corporation and you’d like to partner, please start by filling out the form below.</p>
+    </div>
+
+    <form class="">
+      <div class="field-group">
+        <label>Name*</label>
+        <input type="text" value="" />
+      </div>
+      <div class="field-group">
+        <label>Email*</label>
+        <input type="email" value="" />
+      </div>
+      <div class="field-group">
+        <label>Organization name*</label>
+        <input type="text" value="" />
+      </div>
+
+      <div class="field-group mt-7">
+        <div class="radio">
+          <input checked type="radio" name="partner-type" id="university-partner" value="University Partner" />
+          <label for="university-partner">
+            <span>
+              <b>University Partner</b>
+              <span>I am affiliated with a minority serving university or college and interested in my school becoming a University Partner.</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="partner-type" id="corporate-partner" value="Corporate Partner" />
+          <label for="corporate-partner">
+            <span>
+              <b>Corporate Partner</b>
+              <span>I am affiliated with a company who may be interested in hosting All In Students for 12-week projects and/or summer internships.</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="partner-type" id="organization-partner" value="Organization Partner" />
+          <label for="organization-partner">
+            <span>
+              <b>Organization Partner</b>
+              <span>I am an organization or individual interested in exploring a partnership between All In and the work I’m doing to advance DEI in open source.</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="partner-type" id="introduction" value="Introduction" />
+          <label for="introduction">
+            <span>
+              <b>Introduction</b>
+              <span>I would like to introduce you to someone at an organization or school who may be interested in this program.</span>
+            </span>
+          </label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="partner-type" id="funding-partner" value="Funding Partner" />
+          <label for="funding-partner">
+            <span>
+              <b>Funding Partner</b>
+              <span>I’d like to contribute to All In and/or invest in maintainers or projects directly.</span>
+            </span>
+          </label>
+        </div>
+      </div>
+
+      <button class="btn mt-5" type="submit">
+        <span>Submit form</span>
+        {% include arrow.html %}
+      </button>
+    </form>
+  </div>
+</div>
