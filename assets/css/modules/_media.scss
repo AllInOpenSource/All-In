@@ -38,6 +38,10 @@
   z-index: 2;
   background: $black;
 
+  img {
+    opacity: 0.8;
+  }
+
   &:hover {
     cursor: pointer;
 
@@ -48,6 +52,18 @@
     svg {
       fill: $brand;
     }
+  }
+
+  figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    font-size: 16px;
+    width: 100%;
+    padding: 24px;
+    color: $white;
+    text-align: left;
   }
 
   svg {

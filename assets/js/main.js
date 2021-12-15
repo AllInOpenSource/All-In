@@ -71,8 +71,8 @@ APP.Global = {
     $(window).keyup(function (e) {
       var code = (e.keyCode ? e.keyCode : e.which);
       if (code == 9){
-        if ($(window).width() < 768) {
-          if ( $('.navigation__inner a:focus, .navigation__inner input:focus').length) {
+        if ($(window).width() < 1012) {
+          if ( $('.navigation-drawer a:focus, .navigation-drawer input:focus').length) {
             $('body').addClass('menu-is-active');
           } else {
             $('body').removeClass('menu-is-active');
@@ -83,6 +83,10 @@ APP.Global = {
 
     $('.has-sub-nav > a').click(function(e){
       e.preventDefault();
+    });
+
+    $('.js-close-nav').click(function(){
+      $('body').removeClass('menu-is-active');
     });
 
     $(window).keyup(function (e) {

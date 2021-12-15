@@ -198,6 +198,18 @@ p {
   }
 }
 
+.p-xlg {
+  @include para;
+  font-size: 24px;
+  line-height: 1.5;
+  letter-spacing: 0;
+  font-weight: 400;
+
+  @include start-at($large) {
+    font-size: 32px;
+  }
+}
+
 
 
 .p-sm,
@@ -212,10 +224,6 @@ small {
   }
 }
 
-.font-mono {
-  font-family: $mono;
-  font-weight: 400 !important;
-}
 
 
 .long-form,
@@ -255,9 +263,6 @@ small {
 }
 
 
-.font-weight-600 {
-  font-weight: 600 !important;
-}
 .font-weight-800 {
   font-weight: 800 !important;
 }

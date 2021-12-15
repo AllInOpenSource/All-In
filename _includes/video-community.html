@@ -22,7 +22,7 @@
     var player;
     function onYouTubeIframeAPIReady() {
       player = new YT.Player('player', {
-        videoId: 'ChznCaAZExw',
+        videoId: 'RdwR-E9I3Tg',
         events: {
           'onStateChange': onPlayerStateChange
         }
@@ -35,7 +35,6 @@
 
     playBtn.click(function(e){
       e.preventDefault();
-      //player.cueVideoById('ChznCaAZExw', 619);
       player.playVideo();
       vid.addClass('is-playing');
     });

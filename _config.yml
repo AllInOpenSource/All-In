@@ -57,17 +57,6 @@ sass:
   load_paths:
     - node_modules/
 
-
-collections:
-  insights:
-    output: true
-    permalink: /:collection/:title/
-
-feed:
-  collections:
-    insights:
-      path: "insights/feed.xml"
-
 seo:
 
 

@@ -11,7 +11,7 @@
   justify-content: center;
 
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 15px 12px 13px;
   min-width: 240px;
 
@@ -96,6 +96,15 @@
     }
   }
 
+  &[disabled] {
+    opacity: 0.6;
+    &:hover {
+      background: $brand;
+      color: $black;
+      cursor: default;
+    }
+  }
+
 }
 
 @mixin btn-alt {
@@ -107,8 +116,8 @@
   justify-content: center;
 
   font-size: 14px;
-  font-weight: 600;
-  padding: 13px 12px 15px;
+  font-weight: 500;
+  padding: 14px 12px;
   min-width: 240px;
 
   overflow: hidden;
@@ -158,12 +167,6 @@
     top: auto;
     bottom: 0;
   }
-
-  // span {
-  //   transform: translate3d(0,0,0);
-  //   z-index: 2;
-  //   white-space: nowrap;
-  // }
 
   svg {
     position: relative;
@@ -268,6 +271,11 @@
   }
 }
 
+.btn--grow {
+  min-width: 120px;
+  width: 100%;
+}
+
 
 .btn--spin {
   img, svg {
@@ -284,13 +292,19 @@
   }
 }
 
+.bg-white {
+
+  .btn:hover {
+    color: $black;
+  }
+}
 
 .icon-link {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 500;
   transition: opacity $trans;
 
   @include start-at($large) {
@@ -359,7 +373,7 @@ a:hover .icon-link.icon-link--static,
   display: inline-flex;
   justify-content: flex-start;
   align-items: center;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 16px;
 
   svg {
@@ -403,6 +417,12 @@ p a {
   &:hover {
     opacity: 0.6;
     text-decoration: underline;
+  }
+}
+
+.bg-static, .bg-black {
+  p a {
+    color: $brand;
   }
 }
 

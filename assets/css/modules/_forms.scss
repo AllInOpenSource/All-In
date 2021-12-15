@@ -44,9 +44,9 @@ div.mce_inline_error {
 }
 
 .response#mce-error-response {
-  font-size: 11px;
+  font-size: 16px;
   margin-top: 8px;
-  color: var(--color-scale-red-4);
+  color: $error;
 
   a {
     text-decoration: underline;
@@ -54,9 +54,9 @@ div.mce_inline_error {
 }
 
 .response#mce-success-response {
-  font-size: 14px;
+  font-size: 24px;
   margin-top: 8px;
-  color: var(--color-scale-green-5);
+
 
   a {
     text-decoration: underline;
@@ -67,7 +67,8 @@ div.mce_inline_error {
 // Groups and labels
 // ----------------------------------------
 
-.field-group {
+.field-group,
+.mc-field-group {
   display: block;
   flex-grow: 1;
   position: relative;
@@ -143,6 +144,7 @@ textarea {
   border: 1px solid $border;
   min-height: 120px;
   margin-top: 8px;
+  padding: 12px;
 
 }
 

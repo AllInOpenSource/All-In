@@ -14,7 +14,7 @@
 
   > * {
     width: calc(100% / 3);
-    margin: 20px 0;
+    margin: 12px 0;
 
     @include start-at($small) {
       width: calc(100% / 5);

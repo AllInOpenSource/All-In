@@ -15,21 +15,33 @@
 				</a>
 			</li>
 			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-				<a href="/access-programs/">
-					<span>Access Programs</span>
+				<a href="/access/">
+					<span>Access</span>
 				</a>
 			</li>
 			<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-				<a href="/community-programs/">
-					<span>Community Programs</span>
+				<a href="/community/">
+					<span>Community</span>
+				</a>
+			</li>
+
+			<li{% if page.id == 'equity' %} class="is-active"{% endif %}>
+				<a href="{{ '/#equity' | relative_url }}">
+					<span>Equity</span>
+				</a>
+			</li>
+
+			<li{% if page.id == 'data' %} class="is-active"{% endif %}>
+				<a href="{{ '/#data' | relative_url }}">
+					<span>Data</span>
 				</a>
 			</li>
 		</ul>
 
 		<div class="site-header__utility">
-			<a class="btn-alt" href="/become-a-maintainer/">
+			<a class="btn-alt" href="/become-a-partner/">
 				<div>
-					<span>Apply to Join</span>
+					<span>Join the Community</span>
 					{% include arrow.html %}
 				</div>
 			</a>
@@ -53,20 +65,32 @@
 						</a>
 					</li>
 					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="/access-programs/">
-							<span>Access Programs</span>
+						<a href="/access/">
+							<span>Access</span>
 						</a>
 					</li>
 					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-						<a href="/community-programs/">
-							<span>Community Programs</span>
+						<a href="/community/">
+							<span>Community</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'equity' %} class="is-active"{% endif %}>
+						<a class="js-close-nav" href="{{ '/#equity' | relative_url }}">
+							<span>Equity</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'data' %} class="is-active"{% endif %}>
+						<a class="js-close-nav" href="{{ '/#data' | relative_url }}">
+							<span>Data</span>
 						</a>
 					</li>
 				</ul>
 
 				<div>
-					<a class="btn" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
-	          <span>Apply to join</span>
+					<a class="btn" href="/become-a-partner/">
+	          <span>Join the Community</span>
 	          {% include arrow.html %}
 	        </a>
 				</div>
