@@ -3,65 +3,125 @@ layout: default
 id: home
 ---
 
-
-  <div class="hero">
-    <div class="wrapper-wide">
-      <div class="hero__content">
-        <p class="h1 text-white" data-animate-in="fade" data-animate-in-delay="110">A community dedicated to advancing diversity, equity, and inclusion within open source. </p>
-
-        <div class="d-flex mt-6">
-          <a class="button mr-3" href="https://github.com/AllInOpenSource/All-In" target="_blank">
-            <span>Learn More</span>
-            {% octicon arrow-right height:16 %}
-          </a>
-
-          <a class="button" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
-            <span>Join the Community</span>
-            {% octicon arrow-right height:16 %}
-          </a>
-        </div>
-
-
+<div class="hero hero--video">
+  <div class="hero__content text-center  text-white">
+    <div class="wrapper-thin" data-animate-in="up">
+      <h1 class="h1">We are All In.</h1>
+      <p class="p-xlg">A community dedicated to advancing diversity, equity, and inclusion within open source.</p>
+      <div class="mt-6">
+        <p class="p-lg">Learn more about our community.</p>
+        <a class="btn mt-3" href="https://github.com/AllInOpenSource/All-In/blob/main/README.md" target="_blank">
+          <span>Visit our GitHub repo</span>
+          {% include arrow.html %}
+        </a>
       </div>
     </div>
+    <div class="hero-content__media" data-animate-in="up">
+      {% include video.html %}
 
-
+      <img class="orb" src="/assets/img/direction/orb-green.svg" alt="green orb" />
+    </div>
   </div>
 
-  <img class="hero-side" src="{{ '/assets/img/side-imgs.png' | relative_url }}" alt="3 images of students on a computer" />
+  <img class="hero__pattern" src="{{ '/assets/img/direction/hero-pattern.svg' | relative_url }}" alt="curly bracket pattern" />
+</div>
 
-  <section>
-    <div class="wrapper py-6 my-6 text-white">
-      <div class="d-md-flex pt-6">
-        <div class="col-12 col-md-6 mb-4 mb-md-0 pr-md-3 pr-lg-4" data-animate-in="up" data-animate-in-delay="110">
-          <p class="h2">Our missions is to “open source diversity and inclusion.”</p>
-        </div>
-        <div class="col-12 col-md-6 pl-md-3 pl-lg-4" data-animate-in="up" data-animate-in-delay="110">
-          <p>Currently, diversity and inclusion within open source is being approached in the same way that software development used to be. Most efforts are fragmented, only address part of the challenges, and critically, are not openly shared.</p>
-          <p>We will bring together corporate partners, industry leaders, researchers, and foundations, and build upon existing research and initiatives, to create a more inclusive open source for developers everywhere.</p>
-        </div>
+
+<section class="bg-white bg-pattern py-8">
+  <div class="wrapper-thin text-center" data-animate-in="up">
+    <h2 class="h5 mb-3">{ Our mission }</h2>
+    <p class="h2">To open source<br /> <u>diversity</u> & <u>inclusion</u></p>
+
+    <p>Currently, diversity and inclusion is being approached in the same way that software development used to be prior to the creation of open source. Many efforts, in spite of significant resources and financial investment, are fragmented, not openly shared, only address part of the challenges, and are not collaborative with those outside of a single organization or very few partnerships.</p>
+
+    <p>To create a more inclusive open source community for developers everywhere, we will bring together corporate partners, industry leaders, researchers, and foundations to build upon existing research and initiatives. We invite you to join us.</p>
+
+    <div class="mt-6">
+      <a class="btn" href="/become-a-partner/" target="_blank">
+        <span>Become a partner</span>
+        {% include arrow.html %}
+      </a>
+    </div>
+  </div>
+
+  <div class="wrapper mt-7">
+    <h4 class="h3 mb-4 text-center pt-lg-6">Founding Partners</h4>
+    {% include logo-list.html %}
+  </div>
+
+  <img class="bg-pattern__img" src="{{ '/assets/img/direction/hero-pattern-light.svg' | relative_url }}" alt="curly bracket pattern" />
+</section>
+
+
+<section class="home-cray">
+  <div class="wrapper">
+    <div class="col-12 col-lg-6" data-animate-in="up">
+      <figure class="home-cray-img-1">
+        <img class="" src="/assets/img/direction/woman-on-computer.png" alt="woman on a computer" />
+        <img class="bl" src="/assets/img/direction/bracket-left.svg" alt="curly bracket open" />
+        <img class="br" src="/assets/img/direction/bracket-right.svg" alt="curly bracket close" />
+        <img class="orb" src="/assets/img/direction/orb-green.svg" alt="green orb" />
+      </figure>
+    </div>
+    <div class="col-12 col-lg-6 d-none d-lg-block" data-animate-in="up">
+      <figure class="home-cray-img-2">
+        <img class="" src="/assets/img/direction/man-on-computer.png" alt="man on a computer" />
+        <img class="bl" src="/assets/img/direction/bracket-left.svg" alt="curly bracket open" />
+        <img class="br" src="/assets/img/direction/bracket-right.svg" alt="curly bracket close" />
+        <img class="orb" src="/assets/img/direction/orb-blue.svg" alt="blue orb" />
+      </figure>
+    </div>
+    <div class="col-12 col-lg-6 home-cray__graph" data-animate-in="up">
+      <img class="orb" src="/assets/img/direction/graph.svg" alt="What we do graph: Academia, Social sector, Philanthropy, Government, Open Source DEI Leaders, Foundations, Corporate" />
+    </div>
+    <div class="col-12 col-lg-6 text-white pl-lg-6 mt-lg-6 home-cray__text">
+      <div data-animate-in="up">
+        <p class="h3">All In brings together corporate partners, industry leaders, researchers, and foundations to build upon existing research and initiatives to create a more <u>inclusive</u> open source community for developers everywhere.</p>
       </div>
     </div>
-  </section>
-
-  <section>
-    <div class="wrapper py-6 my-6 text-white">
-      <div class="d-md-flex">
-        <div class="col-12 col-md-6 mb-4 mb-md-0 pr-md-2" data-animate-in="up" data-animate-in-delay="110">
-          <a class="modal-img d-inline-block m-0" href="https://docs.google.com/forms/d/1SFtvJyke-UBrpcfJRVFZ-uqnk6C64qwFslW5f8-7cv0/viewform?edit_requested=true" target="_blank">
-            <img src="{{ '/assets/img/students.svg' | relative_url }}" alt="Fill out the Join the community form" />
-          </a>
-        </div>
+  </div>
+</section>
 
 
-        <div class="col-12 col-md-6 pl-md-2" data-animate-in="up" data-animate-in-delay="110">
-          <a class="modal-img d-inline-block m-0" href="https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo/viewform?edit_requested=true" target="_blank">
-            <img src="{{ '/assets/img/partners.svg' | relative_url }}" alt="Fill out the Maintainers Listening tour form" />
-          </a>
-        </div>
+
+<section class="wrapper-full bg-white py-8">
+  <div class="wrapper">
+    <h2 class="h3 mb-5" data-animate-in="up">The goals of All In will be aligned across four pillars:</h2>
+    <div class="row">
+      <div class="col--xs--12 col--md--6 mb-6" data-animate-in="up">
+        <img class="mb-4" src="/assets/img/direction/access.svg" alt="access icon" />
+        <h3 class="h3">Access</h3>
+        <p>All In will seek to lower barriers to access and provide an on-ramp and clear pathways to success for future developers from underrepresented backgrounds and regions. Our programs will provide support to increase contributors to open source in various stages of their journey and from all walks of life - students, military veterans, career changers, retirees, and formerly or currently incarcerated.</p>
+        <p>We will also address infrastructure challenges such as inequities in course curriculum at some Minority Serving Institutions and challenges to access such as lack of reliable internet connectivity or cost to connect to the internet.</p>
+        <a class="arrow-link mt-4" href="/access/">
+          <span>Explore All In Access</span>
+          {% include arrow.html %}
+        </a>
+      </div>
+      <div class="col--xs--12 col--md--6 mb-6" data-animate-in="up">
+        <img class="mb-4" src="/assets/img/direction/community.svg" alt="community icon" />
+        <h3 class="h3">Community</h3>
+        <p>Inclusion happens at the community level. Maintainers and community leaders are largely responsible for setting the tone for a culture of inclusion within their communities. All In will engage with maintainers to understand their experiences, challenges, and what support they need to advance diversity, equity, and inclusion within their communities. Our efforts will center on providing resources, tools and direct technical assistance.</p>
+        <p>We will also partner with the CHAOSS Project to establish an All In badging program for maintainers, communities, and projects to publicly signal which communities are going beyond a stated commitment by doing the work to drive inclusion.</p>
+        <a class="arrow-link mt-4" href="/community/">
+          <span>Explore All In Community</span>
+          {% include arrow.html %}
+        </a>
+      </div>
+
+      <div class="col--xs--12 col--md--6 mb-6 mb-md-0" data-animate-in="up" id="equity">
+        <img class="mb-4" src="/assets/img/direction/equity.png" alt="equity icon" />
+        <h3 class="h3">Equity</h3>
+        <p>All In will leverage <a href="https://github.com/sponsors" target="_blank">GitHub Sponsors</a> to provide direct financial support to maintainers from marginalized and/or historically excluded backgrounds, and projects that serve under-resourced communities.</p>
+        <p>We will also seek to amplify underrepresented voices through the creation of the All In Speakers Bureau to increase the representation of open source speakers at conferences and events. We will also help connect new voices to opportunities to contribute to articles and podcasts.</p>
+      </div>
+
+      <div class="col--xs--12 col--md--6" data-animate-in="up" id="data">
+        <img class="mb-4" src="/assets/img/direction/data.svg" alt="data icon" />
+        <h3 class="h3">Data</h3>
+        <p>All In will provide insight into the current state of diversity, equity, and inclusion within open source, challenges that need to be addressed, and strengths that can be leveraged to create a more inclusive culture within our communities. We will make informed, data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long-term impact.</p>
+        <p>Our first initiative was to create the 2021 Open Source Diversity, Equity, and Inclusion Survey and partner with the Linux Foundation to survey across the open source ecosystem. View the final report <a href="https://www.prnewswire.com/news-releases/linux-foundation-research-reveals-new-open-source-diversity-equity-and-inclusion-trends-301444234.html" target="_blank">here</a>. We are now collaborating with corporate partners to research inequities in computer science and other technical education programs.</p>
       </div>
     </div>
-  </section>
-
-  {% include students.html %}
-  {% include partners.html %}
+  </div>
+</section>

@@ -2,23 +2,101 @@
 //  Site Footer Styles
 // ---------------------------------------------------------------------
 
-.footer {
-  background: $black;
+.site-footer {
+  background: $gray-darkest url('../img/direction/static.jpg') center / cover no-repeat;
   color: $white;
   border-top: 1px solid #2F3138;
 
-  ul a {
-    color: var(--color-scale-gray-4);
+  a {
+    color: $white;
     transition: color $trans;
 
     &:hover {
-      color: $white;
-      text-decoration: underline;
+      color: $brand;
+    }
+  }
+
+  a, small {
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px 0;
+
+    @include start-at($large) {
+      justify-content: space-between;
     }
   }
 }
 
-.bg-gray-light {
-  background: #24292E;
-  color: var(--color-scale-gray-4);
+.site-footer__legal {
+  text-align: center;
+  order: 3;
+  width: 100%;
+
+  img {
+    display: none;
+  }
+
+  @include start-at($large) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    text-align: left;
+    order: 1;
+
+    img {
+      display: block;
+      margin-right: 12px;
+    }
+  }
+}
+
+.site-footer nav {
+  text-align: center;
+  margin: 18px 0;
+  order: 2;
+  width: 100%;
+
+  @include start-at($large) {
+    width: calc(100% - 440px);
+    margin: 0;
+  }
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+  width: 100%;
+
+  li {
+    margin: 0 12px;
+  }
+
+  @include start-at($large) {
+    justify-content: flex-end;
+    order: 3;
+    width: 220px;
+
+    li {
+      margin: 0 0 0 24px;
+    }
+  }
+
+
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $brand;
+    }
+  }
 }

@@ -1,92 +1,45 @@
-
-
 @font-face {
-  font-family: 'sf-mono';
-  src: url('../fonts/sfmono-medium-webfont.woff2') format('woff2'),
-     url('../fonts/sfmono-medium-webfont.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'sf-mono';
-  src: url('../fonts/sfmono-regular-webfont.woff2') format('woff2'),
-     url('../fonts/sfmono-regular-webfont.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'sf-mono';
-  src: url('../fonts/SFMonoLight.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-}
-//
-// @font-face {
-//   font-family: 'fira';
-//   src: url('../fonts/fira/FiraCode-Medium.woff2') format('woff2'),
-//   url('../fonts/fira/FiraCode-Medium.woff') format('woff');
-//   font-weight: 500;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'fira';
-//   src: url('../fonts/fira/FiraCode-Light.woff2') format('woff2'),
-//   url('../fonts/fira/FiraCode-Light.woff') format('woff');
-//   font-weight: 200;
-//   font-style: normal;
-// }
-// @font-face {
-//   font-family: 'fira';
-//   src: url('../fonts/fira/FiraCode-Regular.woff2') format('woff2'),
-//   url('../fonts/fira/FiraCode-Regular.woff') format('woff');
-//   font-weight: 400;
-//   font-style: normal;
-// }
-
-@font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-regular.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-regular-italic.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-regular-italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-}
-
-
-@font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-medium.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-semibold.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-bold.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-bold.woff') format('woff');
+  font-family: 'Noe';
+  src: url('../fonts/NoeDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/NoeDisplay-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'alliance';
-  src: url('../fonts/alliance-no-2-extrabold.woff2') format('woff2'),
-  url('../fonts/alliance-no-2-extrabold.woff') format('woff');
-  font-weight: 800;
+  font-family: 'theinhardt';
+  src: url('../fonts/Theinhardt-Regular.woff2') format('woff2'),
+    url('../fonts/Theinhardt-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/Theinhardt-Italic.woff2') format('woff2'),
+    url('../fonts/Theinhardt-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/Theinhardt-Medium.woff2') format('woff2'),
+    url('../fonts/Theinhardt-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/Theinhardt-Bold.woff2') format('woff2'),
+    url('../fonts/Theinhardt-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'theinhardt';
+  src: url('../fonts/Theinhardt-Bold-Italic.woff2') format('woff2'),
+    url('../fonts/Theinhardt-Bold-Italic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
 }
