@@ -2,15 +2,15 @@
 
 # All In for Students 2022 Cohort
 
-### All In for Students 2022 Graduation Ceremony 
+## All In for Students 2022 Graduation Ceremony 
 - Click [here](https://www.youtube.com/channel/UC0Au0bMgyOpUM9WKm29G95w) to watch the All In 2022 Graduation Ceremony
 
-### Meet the All In for Students 2022 Cohort
+## Meet the All In for Students 2022 Cohort
 
-#### :mortar_board: 2022 Yearbook
+### :mortar_board: 2022 Yearbook
 ![YearBook2022-Edits-small](https://user-images.githubusercontent.com/70516588/169918331-45eb5fd0-4f5d-45da-854d-54f83bf8c419.jpg)
 
-#### 2022 Alumni
+### 2022 Alumni
 
 Name |Avatar| Handle| School|Yearbook Quote
 --- | --- | --- | ---| ---
