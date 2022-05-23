@@ -6,6 +6,7 @@
 ## Meet the All In for Students 2022 Cohort
 
 ### 2022 Yearbook
+![YearBook2022-Edits-small](https://user-images.githubusercontent.com/70516588/169918331-45eb5fd0-4f5d-45da-854d-54f83bf8c419.jpg)
 
 ### 2022 Alumni
 
@@ -33,4 +34,3 @@ Szaria Thompson|<img src="https://user-images.githubusercontent.com/70516588/169
 Khalil Warner|<img src="PHOTO" width=50% height=50%> |[@Kwarner0126](https://github.com/GitHub/Kwarner0126)|Shaw University|"Start from the seed to the root from the tree, to the fruit of staying organic."
 Adrian Whitehurst|<img src="https://user-images.githubusercontent.com/70516588/169837451-5622e29d-5720-4d97-a0a9-407ff9399b20.jpg" width=50% height=50%> |[@AdrianW90](https://github.com/GitHub/AdrianW90)|Clark Atlant University|"You got to pace yourself; it's all about your breathing. You can have it all; it's all about your reason!" - Nipsey Hussle
 Bernard Emmanuel Zandonda|<img src="https://user-images.githubusercontent.com/70516588/169837508-2356c003-e123-4d53-b3f5-09884f0fa0b9.jpg" width=50% height=50%> |[@zandondab](https://github.com/GitHub/zandondab)|Saint Augustine's University|“The most important part of success is taking that first step; that first step is the very essence of faith.”
-
