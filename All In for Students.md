@@ -25,5 +25,5 @@ The goal of All in For Students is to provide students with the knowledge and sk
 
 Learn more about the amazing students that have graduated from the All In program. 
 
-- [2022 Cohort](https://github.com/AllInOpenSource/All-In/blob/main/All%20In%20for%20Students%20Alumni.md) 
+- [2022 Cohort](https://github.com/AllInOpenSource/All-In/blob/main/All%20In%20for%20Students%202022%20Cohort.md) 
 
