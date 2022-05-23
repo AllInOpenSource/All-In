@@ -1,8 +1,9 @@
+# All In for Students 2022 Graduation Ceremony 
+- Click [here](https://www.youtube.com/channel/UC0Au0bMgyOpUM9WKm29G95w) to watch the All In 2022 Graduation Ceremony
+
+
 # All In for Students 2022 Cohort Yearbook Photo
-
-![164084845-5018baa9-ce01-45c2-b1df-39cf1b6c49c9](https://user-images.githubusercontent.com/70516588/169824333-cd472a3f-6c5d-4e6c-a9ca-47d1e02a0067.jpg)
-
-## All In for Students 2022 Cohort 
+## Meet the 2022 Cohort
 
 ### Clark Atlanta
 Name |Avatar| Handle| Yearbook Quote
@@ -58,6 +59,5 @@ Kristin Mannino|<img src="https://user-images.githubusercontent.com/70516588/169
 Angel Maynor|<img src="https://user-images.githubusercontent.com/70516588/169833212-c8d8409c-b244-4052-aa55-d0e634ed1716.jpg" width=50% height=50%> |[@aiangelm](https://github.com/aiangelm) |“It's all happening.”
 William Talbert| <img src="https://user-images.githubusercontent.com/70516588/169841496-22dadbdd-d225-4300-8112-95da8d322083.jpg" width=50% height=50%> |[@wctrocky](https://github.com/wctrocky)|“Do not go where the path may lead, go instead where there is no path and leave a trail.” - Ralph Waldo Emerson
 Szaria Thompson|<img src="https://user-images.githubusercontent.com/70516588/169837685-5bf49955-fb1c-4131-a0ac-eca87ee27b02.jpg" width=50% height=50%> |[@st327](https://github.com/st327)|“You have to be odd to be number one.”
-
 
 
