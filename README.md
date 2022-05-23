@@ -40,25 +40,12 @@ This program is an immersive program that provides inclusive development and tra
 ### Maintainers Listening Tour
 The Maintainers Listening Tour is a series of focus groups and individual interviews with maintainers who are interested in attracting and retaining new contributors with diverse backgrounds in an inclusive way. 
 
-We will be collecting best practices, lessons learned, and stories that highlight:
+As a part of  the 2021 Maintainers Listening Tour, we collected best practices, lessons learned, and stories that highlight:
 - What maintainers are doing to advance diversity, inclusion, and belonging within their communities;
 - What is working well;
 - What is not working well;
 - What challenges they are facing that may be prohibiting them from creating a culture of inclusion within their communities; and 
 - What they would like to see in a program that is designed for them, All in for Maintainers.
-
-To participate in the Maintainer’s Listening Tour, join us at one of the following conferences to participate in an in-person focus group: 
-
-- [Open Source Summit](https://osselc21.sched.com/event/nCpS)
-  - Tuesday, September 28
-
-- [All Things Open](https://2021.allthingsopen.org/)
-  - Monday, October 18 
-
-- [Beyond Universe](https://githubuniverse.com/) 
-  - Monday, October 25 and Tuesday, October 26
-
-- [To submit your feedback online click here.](https://docs.google.com/forms/d/1IiGB2Id7bCobmzECCkfzmb76UV7HQVA1szKQMzNtwXo/edit)
 
 ## Equity
 All In will seek to leverage [GitHub Sponsors](https://github.com/sponsors) which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well. 
@@ -66,7 +53,7 @@ All In will seek to leverage [GitHub Sponsors](https://github.com/sponsors) whic
 ## Data
 All In will prioritize consistently gathering and analyzing data that will provide insight into the current state of diversity, equity, and inclusion within open source, challenges that need to be addressed and strengths that can be leveraged to take advantage of opportunities to create a more inclusive culture within our communities. We will make informed data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long term impact. 
 
-Our first initiative was to create the [Open Source Diversity, Equity and Inclusion Survey](https://www.linuxfoundation.org/press-release/linux-foundation-launches-2021-open-source-diversity-equity-and-inclusion-survey/) and partner with the Linux Foundation to survey across the many platforms communities within the open source ecosystem. Preliminary findings will be released September-November 2021 and the full report will be released in December 2021. 
+Our first initiative was to create the 2021 Open Source Diversity, Equity, and Inclusion Survey and partner with the Linux Foundation to survey across the open source ecosystem. View the final report [here](https://www.prnewswire.com/news-releases/linux-foundation-research-reveals-new-open-source-diversity-equity-and-inclusion-trends-301444234.html). We are now collaborating with corporate partners to research inequities in computer science and other technical education programs.
 
 ---
 
@@ -75,4 +62,3 @@ Our first initiative was to create the [Open Source Diversity, Equity and Inclus
 #### Email Address: info@allinopensource.org
 
 _If you are having difficulty accessing any of the above links, please contact info@allinopensource.org for further information on how you can submit your feedback to our team._
-
