@@ -8,8 +8,6 @@ Students will be enrolled in online, self-paced courses that provide them with a
 - [Introduction to Cloud Infrastructure Technologies](https://training.linuxfoundation.org/training/introduction-to-cloud-infrastructure-technologies/) 
 - [Introduction to DevOps and Site Reliability Engineering](https://training.linuxfoundation.org/training/introduction-to-devops-and-site-reliability-engineering-lfs162/)
 
-They will also have access to a class form and a professor for one on one instruction to assist as they go through the curriculum.
- 
 ## Professional Development
 All In for Student participants will attend regular meet ups to hear from open source professionals on topics that will help equip them for success within tech, corporate culture and open source communities. Topics include: Leveraging employee resource groups, Dealing with microaggressions/being the only one, Ensuring great feedback/performance management, Careers in tech, Developing and owning your personal story, the power of collaboration and networking before and after the job. 
  
@@ -27,3 +25,4 @@ Learn more about the amazing students that have graduated from the All In progra
 
 - [2022 Cohort](https://github.com/AllInOpenSource/All-In/blob/main/All%20In%20for%20Students%202022%20Cohort.md) 
 
+## [Request more information on the All In for Students program](https://docs.google.com/forms/d/1BWPbe_DewmBWzTqJ9s7U49yM2306ocz0nmj8ZhLZn4U/edit)
