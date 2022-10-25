@@ -50,7 +50,7 @@
   display: block;
   font-family: $serif;
   font-weight: 700;
-  font-size: 36px !important;
+  font-size: 32px !important;
   line-height: 125%;
   letter-spacing: 0;
   margin-bottom: 16px;
@@ -61,6 +61,14 @@
 
   @include start-at($large) {
     font-size: 40px !important;
+  }
+}
+
+.h3--alt {
+  font-size: 28px !important;
+
+  @include start-at($large) {
+    font-size: 32px !important;
   }
 }
 

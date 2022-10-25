@@ -2,6 +2,58 @@
 //  One Offs
 // ---------------------------------------------------------------------
 
+
+#benefits {
+
+  h4 {
+    font-family: $serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 12px 0 12px;
+  }
+
+  p {
+    font-size: 14px;
+
+    @include start-at($medium) {
+      font-size: 16px;
+    }
+  }
+
+  small {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    color: #61636A;
+  }
+}
+
+.row--img-icons {
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  img {
+    position: absolute;
+    left: -12px;
+    top: -24px;;
+    z-index: -1;
+  }
+}
+
+.faqs {
+
+  @include start-at($large) {
+    column-count: 2;
+    column-gap: 48px;
+  }
+  > * {
+    margin-bottom: 36px;
+  }
+}
+
+
 // ----------------------------------------
 // Bullet
 // ----------------------------------------
