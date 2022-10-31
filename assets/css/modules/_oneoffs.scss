@@ -50,6 +50,7 @@
   }
   > * {
     margin-bottom: 36px;
+    break-inside: avoid-column;
   }
 }
 
