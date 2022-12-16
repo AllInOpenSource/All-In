@@ -28,7 +28,17 @@ The All In community will collaborate and build on research and initiatives that
 ## Access
 
 ### All In for Students 
-This is a paid, 12-month program for select college students from underrepresented backgrounds who are often overlooked during the corporate recruitment process. During the program, students will receive professional development training, open source education, a structured 12-week open source project, and ultimately have the opportunity to join one of our corporate partners for a summer internship experience. For more information on the pilot please click [here](https://github.com/soyetubo/All-In/blob/main/All%20In%20for%20Students.md).
+All In for Students is an online program for tech students from underrepresented backgrounds that provides open source education, training, and internship opportunities. 
+
+**Who is eligible to participate?**
+Students enrolled full time or part time at a:
+- U.S. Historically Black College or University (HBCU)
+- U.S. Hispanic Serving Institution (HSI)
+- U.S. Women’s College
+- U.S. Community College
+- Any U.S. four-year institution and identify as a racial or ethnic minority
+
+To learn more about the All In for Students program, check out our [website](https://allinopensource.org/access/). If you're interested in participating in the All In for Students Program, fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSfMJM7ILztN9Mv1fjLZYN5GniJrcfP_0uG8VW7e3lBULmfohw/viewform). 
 
 
 ### All in for Maintainers
