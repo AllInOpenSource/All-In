@@ -27,8 +27,8 @@ The All In community will collaborate and build on research and initiatives that
 
 ## Access
 
-### All In for Students 
-All In for Students is an online program for tech students from underrepresented backgrounds that provides open source education, training, and internship opportunities. 
+### All In for Students
+All In for Students is an online program for tech students from underrepresented backgrounds that provides open source education, training, and internship opportunities.
 
 **Who is eligible to participate?**
 Students enrolled full time or part time at a:
@@ -38,7 +38,7 @@ Students enrolled full time or part time at a:
 - U.S. Community College
 - Any U.S. four-year institution and identify as a racial or ethnic minority
 
-To learn more about the All In for Students program, check out our [website](https://allinopensource.org/access/). If you're interested in participating in the All In for Students Program, fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSfMJM7ILztN9Mv1fjLZYN5GniJrcfP_0uG8VW7e3lBULmfohw/viewform). 
+To learn more about the All In for Students program, check out our [website](https://allinopensource.org/students/). If you're interested in participating in the All In for Students Program, fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSfMJM7ILztN9Mv1fjLZYN5GniJrcfP_0uG8VW7e3lBULmfohw/viewform). 
 
 
 ### All in for Maintainers
@@ -47,20 +47,20 @@ This program is an immersive program that provides inclusive development and tra
 ## Community
 
 ### Maintainers Listening Tour
-The Maintainers Listening Tour is a series of focus groups and individual interviews with maintainers who are interested in attracting and retaining new contributors with diverse backgrounds in an inclusive way. 
+The Maintainers Listening Tour is a series of focus groups and individual interviews with maintainers who are interested in attracting and retaining new contributors with diverse backgrounds in an inclusive way.
 
 As a part of  the 2021 Maintainers Listening Tour, we collected best practices, lessons learned, and stories that highlight:
 - What maintainers are doing to advance diversity, inclusion, and belonging within their communities;
 - What is working well;
 - What is not working well;
-- What challenges they are facing that may be prohibiting them from creating a culture of inclusion within their communities; and 
+- What challenges they are facing that may be prohibiting them from creating a culture of inclusion within their communities; and
 - What they would like to see in a program that is designed for them, All in for Maintainers.
 
 ## Equity
-All In will seek to leverage [GitHub Sponsors](https://github.com/sponsors) which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well. 
+All In will seek to leverage [GitHub Sponsors](https://github.com/sponsors) which allows you to provide direct financial support to the maintainers and projects you love and the open source projects you depend on. We are developing a robust outreach campaign to increase the number of maintainers from underrepresented and/or historically excluded backgrounds and projects that serve under resourced communities. The campaign will also include increased funding to those projects as well.
 
 ## Data
-All In will prioritize consistently gathering and analyzing data that will provide insight into the current state of diversity, equity, and inclusion within open source, challenges that need to be addressed and strengths that can be leveraged to take advantage of opportunities to create a more inclusive culture within our communities. We will make informed data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long term impact. 
+All In will prioritize consistently gathering and analyzing data that will provide insight into the current state of diversity, equity, and inclusion within open source, challenges that need to be addressed and strengths that can be leveraged to take advantage of opportunities to create a more inclusive culture within our communities. We will make informed data-driven decisions, ensure we have short term metrics of success, and monitor longitudinal data to measure long term impact.
 
 Our first initiative was to create the 2021 Open Source Diversity, Equity, and Inclusion Survey and partner with the Linux Foundation to survey across the open source ecosystem. View the final report [here](https://www.prnewswire.com/news-releases/linux-foundation-research-reveals-new-open-source-diversity-equity-and-inclusion-trends-301444234.html). We are now collaborating with corporate partners to research inequities in computer science and other technical education programs.
 

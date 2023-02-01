@@ -9,24 +9,24 @@
 		</div>
 
 		<ul class="desktop-navigation">
-			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-				<a href="{{ '/access/' | relative_url }}">
+			<li{% if page.id == 'students' %} class="is-active"{% endif %}>
+				<a href="{{ '/students/' | relative_url }}">
 					<span>Students</span>
 				</a>
 			</li>
-			<li class="has-sub-nav {% if page.id == 'community' or page.id == 'resources' %} is-parent{% endif %}">
-				<a href="{{ '/community/' | relative_url }}">
+			<li class="has-sub-nav {% if page.id == 'maintainers' or page.id == 'resources' or page.id == 'faq' or page.id == 'listening-tour' %} is-parent{% endif %}">
+				<a href="{{ '/maintainers/' | relative_url }}">
 					<span>Maintainers</span>
 				</a>
 
 				<ul class="sub-nav">
-					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/' | relative_url }}">
+					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/' | relative_url }}">
 							<span>Overview</span>
 						</a>
 					</li>
 					<li{% if page.id == 'listening-tour' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/maintainers-listening-tour/' | relative_url }}">
+						<a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">
 							<span>Maintainers Listening Tour</span>
 						</a>
 					</li>
@@ -37,13 +37,13 @@
 					</li>
 
 					<li class="bold-link">
-						<a href="{{ '/community/#programs' | relative_url }}">
+						<a href="{{ '/maintainers/#programs' | relative_url }}">
 							<span>Programs</span>
 						</a>
 					</li>
 
 					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/DEI-resources/' | relative_url }}">
+						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
 							<span>DEI Resource Hub</span>
 						</a>
 					</li>
@@ -111,20 +111,20 @@
 							<span>Overview</span>
 						</a>
 					</li>
-					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="/access/">
+					<li{% if page.id == 'students' %} class="is-active"{% endif %}>
+						<a href="/students/">
 							<span>Students</span>
 						</a>
 					</li>
 
-					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/' | relative_url }}">
+					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/' | relative_url }}">
 							<span>Maintainers</span>
 						</a>
 					</li>
 
 					<li{% if page.id == 'listening-tour' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/maintainers-listening-tour/' | relative_url }}">
+						<a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">
 							<span>Maintainers Listening Tour</span>
 						</a>
 					</li>
@@ -135,7 +135,7 @@
 					</li>
 
 					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
-						<a href="{{ '/community/DEI-resources/' | relative_url }}">
+						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
 							<span>DEI Resource Hub</span>
 						</a>
 					</li>

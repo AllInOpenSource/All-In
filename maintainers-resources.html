@@ -1,7 +1,7 @@
 ---
 layout: default
 id: resources
-permalink: /community/DEI-resources/
+permalink: /maintainers/DEI-resources/
 title: DEI Resource Hub
 ---
 
@@ -14,8 +14,7 @@ title: DEI Resource Hub
         </div>
         <div class="col-12 col-md-8 col-lg-7" data-animate-in="up">
           <h2 class="h2">DEI Resource Hub</h2>
-          <p>The All In for Maintainers DEI Resource Hub is a highly curated and searchable list of current and relevant DEI best practices, training material, research and trends for open source maintainers.</p>
-          <p>The DEI Resource Hub seeks to provide a digital archive of currently available and newly created open source specific DEI resources from various organizations, thought leaders and researchers.</p>
+          <p>The All In for Maintainers DEI Resource Hub is a centralized hub for content addressing best practices, training material, research, and trends for open source maintainers.</p>
 
           <div class="d-flex flex-wrap btns mt-6 d-none">
             <a class="btn btn--scroll btn--full-sm mr-3" href="#about-the-tour" data-scroll-to="maintainers-listening-tour">
@@ -34,7 +33,7 @@ title: DEI Resource Hub
 </div>
 
 
-<div class="bg-white bg-pattern-left py-8 wrapper-fulls" id="maintainers-listening-tour">
+<div class="bg-white bg-pattern-left py-8">
   <div class="wrapper d-md-flex flex-justify-between">
     <div class="col-12 col-md-4 pr-md-4 mb-6 mb-md-0" data-animate-in="up">
       <div class="rte">
@@ -42,21 +41,21 @@ title: DEI Resource Hub
       </div>
     </div>
     <div class="col-12 col-md-8 pl-md-4 pl-lg-2" data-animate-in="up">
-      <p>At the conclusion of the <a href="https://www.linuxfoundation.org/research/the-2021-linux-foundation-report-on-diversity-equity-and-inclusion-in-open-source" target="_blank">DEI in Open Source</a> and <a href="{{ '/community/maintainers-listening-tour/' | relative_url }}">Maintainers Listening Tour</a>, one of the most common challenges we heard from maintainers was not knowing where to start. They are overwhelmed by the number of DEI resources available and want a website or repo where they can find a starting point for highly vetted resources in one place.</p>
-
-      <p>Recognizing that people consume content in different ways, the DEI Resource Hub offers videos, articles, research, and training courses covering topics often cited to advance DEI in open source communities.</p>
+      <p>One of the most common challenges we heard during the <a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">Maintainers Listening Tour</a> was not knowing where to start when considering ways to advance diversity and inclusion within open source communities.</p>
 
       <blockquote class="my-5 px-4 px-lg-6">
         <q class="h3">The number of DEI resources we have is overwhelming. We wish there was a website or repo where we could go to get all of the resources in one place.</q>
         <img src="{{ '/assets/img/direction/icons/orb-blue.svg' | relative_url }}" alt="blue orb" />
       </blockquote>
 
-      <p>The All In for Maintainers DEI Resource Hub is a solution to begin building solutions to solve the pain points maintainers have identified as blocks in their journey of learning how to create more diverse and inclusive open source communities.</p>
+      <p>The All In for Maintainers DEI Resource Hub is a digital archive dedicated to sharing resources addressing DEI in open source research and trends. Our goal is to help share information that will support maintainers and community leaders in their journey of learning how to create more diverse and inclusive open source communities.</p>
+
+      <p>Whether you are taking the first steps in exploring how to make open source projects more accessible and inclusive or far into your DEI journey and seeking “what’s next,” we are here to help every step of the way.</p>
     </div>
   </div>
 
 
-  <div class="wrapper d-md-flex flex-justify-between py-8">
+  <div class="wrapper d-md-flex flex-justify-between py-8" id="resources">
     <div class="col-12 col-md-4 pr-md-4 mb-6 mb-md-0" data-animate-in="up">
       <div class="topics-wrap d-none d-lg-block">
         <h2 class="h3 mb-4">Browse by topic</h2>
@@ -80,47 +79,11 @@ title: DEI Resource Hub
           {% endfor %}
         </nav>
 
-        <script>
-          var $ = jQuery;
-          var topic = $('.topic .arrow-link');
-          var topicUl = $('.topic ul');
-
-          $( ".topic:first-of-type .arrow-link" ).addClass('is-active');
-          $( ".topic:first-of-type ul" ).slideDown();
-
-          topic.click(function(e){
-            e.preventDefault();
-
-            topic.removeClass('is-active');
-            $('.topic ul').slideUp();
-
-            let el = $(this);
-            let target = el.attr('data-topic');
-            el.addClass('is-active');
-            target = $('#'+ target);
-            let list = el.next('ul');
-            list.slideDown();
-
-            $('html, body').animate({
-              scrollTop: target.offset().top - 24
-            }, 800);
-          });
-
-          topicUl.click(function(e){
-            e.preventDefault();
-            let el = $(this).parents('.topic').find('.arrow-link');
-            let target = el.attr('data-topic');
-            target = $('#'+ target);
-            $('html, body').animate({
-              scrollTop: target.offset().top - 24
-            }, 800);
-          });
-        </script>
       </div>
     </div>
 
     <div class="col-12 col-md-8 pl-md-4 pl-lg-2" data-animate-in="up">
-      <p class="mb-6">Explore key maintainer focused DEI resources by topic.</p>
+      <p class="mb-6">Explore DEI resources by topic.</p>
       {% for group in site.data.resources %}
       {% assign slug = group.group|slugify %}
       <div class="resource-group" id="{{slug}}">
@@ -180,40 +143,63 @@ title: DEI Resource Hub
           </ul>
       </div>
       {% endfor %}
-
     </div>
+
+    <script>
+      var $ = jQuery;
+      var topic = $('.topic .arrow-link');
+      var topicUl = $('.topic ul');
+
+      $( ".topic:first-of-type .arrow-link" ).addClass('is-active');
+      $( ".topic:first-of-type ul" ).slideDown();
+
+      topic.click(function(e){
+        e.preventDefault();
+
+        topic.removeClass('is-active');
+        $('.topic ul').slideUp();
+
+        let el = $(this);
+        let target = el.attr('data-topic');
+        el.addClass('is-active');
+        target = $('#'+ target);
+        let list = el.next('ul');
+        list.slideDown();
+
+        $('html, body').animate({
+          scrollTop: target.offset().top - 24
+        }, 800);
+      });
+
+      topicUl.click(function(e){
+        e.preventDefault();
+        let el = $(this).parents('.topic').find('.arrow-link');
+        let target = el.attr('data-topic');
+        target = $('#'+ target);
+        $('html, body').animate({
+          scrollTop: target.offset().top - 24
+        }, 800);
+      });
+    </script>
   </div>
 </div>
 
 
 <section class="wrapper-full bg-static py-8">
   <div class="wrapper-md2 text-white text-centers" data-animate-in="up">
-
     <div class="rte">
-
-
       <h2 class="h1">How can I get involved?</h2>
 
-      <p class="p-lg">The resources included in the DEI Resource Hub were collected in a collaborative manner from maintainers, community leaders, researchers, open source thought leaders, and culled from industry organizations and open source projects leading in this work.</p>
+      <p class="p-lg">The resources shared in the DEI Resource Hub were collected collaboratively from maintainers, community leaders, researchers, and open source projects leading in this work.</p>
 
-      <p>In this process of co-creation and resource sharing, we intend to ensure that this hub does not become stale. We want to continue expanding the conversations, research, tools, and data that will evolve as the needs of maintainers and open source communities progress. And that's where you come in!</p>
+      <p>Do you have DEI content to share? Please submit the content by filling out the <a class="link" href="{{ '/maintainers/share-your-resources/' | relative_url }}">DEI Content Submission form</a>.</p>
 
-      <h4 class="h4">Here’s how you can get involved:</h4>
-
-      <ul>
-        <li>Do you have DEI content to share? <a class="link" href="{{ '/share-your-resources/' | relative_url }}">Please submit it by filling out the DEI Content Submission Form.</a></li>
-        <li>Spread the word by sharing your favorite DEI Resource on Twitter and tag <a href="https://twitter.com/AllInOpenSource" target="_blank">@allinopensource</a>.</li>
-      </ul>
-
-      <p>By working together with you, we can collectively ensure everyone has access to the tools needed to champion inclusive and diverse spaces in open source. And by doing so, we hope to build upon the initial tenets of open source by fostering collaboration and creating a more diverse and inclusive open source community together.</p>
-
-
-      <p>Continue to check our website and <a href="https://github.com/AllInOpenSource/All-In/issues/allinopensource.org" target="_blank">repo</a> for updates on iterations to the DEI Resource Hub and announcements on the next program to roll out.</p>
+      <p>By working together with you, we can collectively ensure everyone has access to the tools needed to champion inclusive, equitable, accessible, and diverse spaces in open source.</p>
     </div>
 
 
     <div class="mt-5">
-      <a class="btn" href="{{ '/share-your-resources/' | relative_url }}">
+      <a class="btn" href="{{ '/maintainers/share-your-resources/' | relative_url }}">
         <span>Share Your Resources</span>
         {% include arrow.html %}
       </a>

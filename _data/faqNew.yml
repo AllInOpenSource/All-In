@@ -3,13 +3,13 @@
     - question: Who is this DEI Resource Hub designed for?
       answer: Though designed in response to the feedback we received from maintainers, this resource hub is for anyone interested in learning more about current trends, research, best practices and more, related to advancing DEI in open source.
     - question: Are these resources free to access?
-      answer: Yes! Although some may require registration on the source’s website, all resources included in our Hub are free for anyone to use.
+      answer: Yes! Although some may require registration on the source’s website, all resources included in the DEI Resource Hub are free for anyone to use.
     - question: What types of resources are included in the Hub?
-      answer: We have included videos, articles, research papers, and full training courses in our Hub.
+      answer: We have included videos, articles, research papers, and full training courses in the DEI Resource Hub.
     - question: What if I have a resource to suggest?
-      answer: We’d love to hear about it! Please use our form to give us a little more information about the resource you’d like to add to our list. (Please note, the All In Editorial Team may decide to include only those resources that align with the All In mission and meet the criteria for inclusion.)
-    - question: What if I’m looking for information on a DEI topic that is not included in your Hub?
-      answer: The Resource Hub is not meant to be a comprehensive list of all resources available, but we would love to know if there are topics that are of interest that we are missing. Please email us at maintainers@allinopensource.org and tell us more about what you’re looking for.
+      answer: We’d love to hear about it! Please use the <a href="/maintainers/share-your-resources/">DEI Resource Hub Submission Form</a> to give us a little more information about the resource you’d like to add to our list. Please note that while we appreciate suggestions from the community for new resources, the All In editorial team will prioritize content that aligns to the specific challenges shared during the Maintainers Listening Tour.
+    - question: What if I’m looking for information on a DEI topic that is not included in the DEI Resource Hub?
+      answer: The DEI Resource Hub is not meant to be a comprehensive list of all resources available, but we would love to know if there are topics that are of interest that we are missing. Please email us at maintainers@allinopensource.org and tell us more about what you’re looking for.
 
 
 - group: DEI Project Badging
