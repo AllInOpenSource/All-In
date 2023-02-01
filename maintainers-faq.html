@@ -1,0 +1,67 @@
+---
+layout: default
+id: faq
+permalink: /faq/
+title: Maintainers FAQs
+---
+
+
+<div class="bg-white bg-pattern-left wrapper-full" id="maintainers-listening-tour">
+
+  <header class="wrapper text-center py-8 pb-6">
+    <h1 class="h1 pb-lg-4">Maintainers FAQs</h1>
+  </header>
+
+  <div class="wrapper">
+    <hr />
+    <div class="text-center pt-6 mb-lg-4">
+      <h2 class="h3">Browse by topic</h2>
+    </div>
+
+    <ul class="faq-nav py-4">
+      {% for group in site.data.faqNew %}
+      {% assign slug = group.group|slugify %}
+      <li>
+        <a href="#{{ slug }}" data-scroll-to="{{ slug }}" data-scroll-offset="80">
+          <span>{{ group.group }}</span>
+          <svg width="15" height="17" viewBox="0 0 15 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="9.33398" y="1.71216" width="2.39999" height="2.39999" transform="rotate(135 9.33398 1.71216)" fill="#121212"/>
+            <rect x="9.33398" y="5.10571" width="2.39999" height="2.39999" transform="rotate(135 9.33398 5.10571)" fill="#121212"/>
+            <rect x="9.33398" y="8.49976" width="2.39999" height="2.39999" transform="rotate(135 9.33398 8.49976)" fill="#121212"/>
+            <rect x="9.33398" y="11.8943" width="2.39999" height="2.39999" transform="rotate(135 9.33398 11.8943)" fill="#121212"/>
+            <rect x="11.0312" y="13.5911" width="2.39999" height="2.39999" transform="rotate(135 11.0312 13.5911)" fill="#121212"/>
+            <rect x="9.33398" y="15.2878" width="2.39999" height="2.39999" transform="rotate(135 9.33398 15.2878)" fill="#121212"/>
+            <rect x="7.63672" y="13.5911" width="2.39999" height="2.39999" transform="rotate(135 7.63672 13.5911)" fill="#121212"/>
+            <rect x="5.93945" y="11.8943" width="2.39999" height="2.39999" transform="rotate(135 5.93945 11.8943)" fill="#121212"/>
+            <rect x="4.24316" y="10.1965" width="2.39999" height="2.39999" transform="rotate(135 4.24316 10.1965)" fill="#121212"/>
+            <rect x="12.7285" y="11.8943" width="2.39999" height="2.39999" transform="rotate(135 12.7285 11.8943)" fill="#121212"/>
+            <rect x="14.4248" y="10.1965" width="2.39999" height="2.39999" transform="rotate(135 14.4248 10.1965)" fill="#121212"/>
+          </svg>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <hr />
+  </div>
+
+  {% for group in site.data.faqNew %}
+  {% assign slug = group.group|slugify %}
+  <div class="wrapper my-7" id="{{ slug }}">
+    <h2 class="h3 h3-lg mb-6">{{ group.group }}</h2>
+    {% if group.comingSoon %}
+    <p>This program is coming soon!</p>
+    {% else %}
+    <div class="row">
+      {% for faq in group.faqs %}
+      <div class="col--xs--12 col--md--6 mb-6">
+        <h3 class="h4">{{ faq.question }}</h3>
+        <p>{{ faq.answer }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+</div>

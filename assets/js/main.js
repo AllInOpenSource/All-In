@@ -81,9 +81,9 @@ APP.Global = {
       }
     });
 
-    $('.has-sub-nav > a').click(function(e){
-      e.preventDefault();
-    });
+    // $('.has-sub-nav > a').click(function(e){
+    //   e.preventDefault();
+    // });
 
     $('.js-close-nav').click(function(){
       $('body').removeClass('menu-is-active');

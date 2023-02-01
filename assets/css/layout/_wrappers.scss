@@ -29,3 +29,7 @@
     @include wrapper;
     max-width: 760px;
 }
+.wrapper-md2 {
+    @include wrapper;
+    max-width: 940px;
+}

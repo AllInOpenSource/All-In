@@ -72,7 +72,7 @@ div.mce_inline_error {
   display: block;
   flex-grow: 1;
   position: relative;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   width: 100%;
 
   label {
@@ -85,6 +85,10 @@ div.mce_inline_error {
       font-weight: 400;
     }
   }
+
+  input {
+    margin-bottom: 0 !important;
+  }
 }
 
 .field-group-two {
@@ -95,8 +99,8 @@ div.mce_inline_error {
     justify-content: space-between;
 
     > * {
-      width: calc(50% - 18px);
-      max-width: calc(50% - 18px);
+      width: calc(50% - 10px);
+      max-width: calc(50% - 10px);
       margin-top: 0 !important;
     }
 
@@ -169,7 +173,7 @@ input[type="submit"] {
 .checkbox {
   + .radio,
   + .checkbox {
-    margin-top: 24px;
+    margin-top: 12px;
   }
 
   input {
@@ -178,7 +182,7 @@ input[type="submit"] {
 
   label {
     position: relative;
-    font-weight: 700;
+    font-weight: 400;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -210,9 +214,9 @@ input[type="submit"] {
       margin-right: 16px;
 
       @include start-at($large) {
-        width: 32px;
-        min-width: 32px;
-        height: 32px;
+        width: 24px;
+        min-width: 24px;
+        height: 24px;
       }
     }
 
@@ -230,12 +234,6 @@ input[type="submit"] {
       transition: transform .35s cubic-bezier(0.68,-0.55,0.27,1.75);
       cursor: pointer;
 
-      @include start-at($large) {
-        width: 16px;
-        left: 8px;
-        top: 8px;
-        height: 16px;
-      }
     }
   }
 
@@ -267,7 +265,7 @@ input[type="submit"] {
 input::-webkit-input-placeholder {
   font-weight: 400;
   font-size: 16px;
-  color: var(--color-scale-gray-4);
+  opacity: 0.7;
   transition: opacity $trans;
 }
 input:focus::-webkit-input-placeholder {

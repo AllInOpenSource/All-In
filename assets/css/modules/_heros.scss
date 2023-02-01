@@ -14,6 +14,8 @@
   padding: 180px 0 48px;
   background: url('../img/direction/static.jpg') center / cover no-repeat;
 
+
+
   .btns {
     justify-content: center;
 
@@ -30,11 +32,19 @@
   @include start-at($medium) {
     padding: 120px 0;
     min-height: 608px;
+
+    &.hero--short {
+      min-height: 570px;
+    }
   }
 
   @include start-at($xlarge) {
     padding: 192px 0 140px;
     min-height: 764px;
+
+    &.hero--short {
+      min-height: 570px;
+    }
   }
 }
 

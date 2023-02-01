@@ -139,7 +139,14 @@
 .bg-pattern-right {
   position: relative;
   z-index: 1;
-  background: $white url('../img/direction/pattern-right.svg') 90% top / auto 100% no-repeat;
+  //background: $white url('../img/direction/pattern-right.svg') 90% top / auto 100% no-repeat;
+  background: $white url('../img/direction/pattern-repeat.svg') right top / 44% auto repeat-y;
+}
+
+.bg-pattern-left {
+  position: relative;
+  z-index: 1;
+  background: $white url('../img/direction/pattern-repeat.svg') 0 top / 44% auto repeat-y;
 }
 
 .bg-static {

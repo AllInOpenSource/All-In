@@ -26,6 +26,12 @@ body.all-in-for-maintainers-listening-tour {
   padding: 180px $wrapper-padding 48px;
   background: url('../img/direction/pattern-dark.svg') top center / 70% auto  repeat-y;
 
+  a {
+    color: $white;
+    text-decoration: underline;
+
+  }
+
   .logo-list {
     > * {
       width: calc(100% / 2);
@@ -52,7 +58,7 @@ body.all-in-for-maintainers-listening-tour {
 
   @include start-at($large) {
     width: 45%;
-    padding: 256px $wrapper-padding 48px;
+    padding: 180px $wrapper-padding 48px;
 
     > * {
       max-width: 492px;
