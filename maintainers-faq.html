@@ -52,9 +52,9 @@ title: Maintainers FAQs
     {% if group.comingSoon %}
     <p>This program is coming soon!</p>
     {% else %}
-    <div class="row">
+    <div class="faqs-list">
       {% for faq in group.faqs %}
-      <div class="col--xs--12 col--md--6 mb-6">
+      <div class="mb-6">
         <h3 class="h4">{{ faq.question }}</h3>
         <p>{{ faq.answer }}</p>
       </div>

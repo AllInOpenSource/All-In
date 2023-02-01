@@ -44,3 +44,17 @@
     }
   }
 }
+
+
+.faqs-list {
+
+  > div {
+    -webkit-column-break-inside: avoid;
+  }
+
+  @include start-at($large) {
+    column-count: 2;
+    column-gap: 36px;
+  }
+
+}
