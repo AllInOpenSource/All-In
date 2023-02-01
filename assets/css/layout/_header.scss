@@ -32,6 +32,17 @@ body {
       opacity: 1;
     }
   }
+
+  &.faq {
+    padding-top: $header-height;
+
+    @include start-at($header-breakpoint) {
+      padding-top: $header-height-lg;
+    }
+    .site-header {
+      background: $black;
+    }
+  }
 }
 
 .site-header > .container-wide {
@@ -140,7 +151,7 @@ $max-logo-width: 168px;
   }
 
   .has-sub-nav > div,
-  a:not(.btn-alt) {
+  > li > a {
     position: relative;
     font-size: 14px;
     color: currentColor;
@@ -160,7 +171,8 @@ $max-logo-width: 168px;
 
   }
 
-  li.is-active {
+  li.is-active,
+  li.is-parent {
     a {
       color: $white;
 
@@ -176,8 +188,8 @@ $max-logo-width: 168px;
   }
 }
 
-.desktop-navigation a:not(.btn-alt),
-.mobile-navigation a:not(.btn) {
+.desktop-navigation > li > a,
+.mobile-navigation a {
   position: relative;
   display: flex;
   align-items: center;
@@ -467,18 +479,18 @@ $max-logo-width: 168px;
   position: absolute;
   background: #161D27;
   padding: 24px 18px;
-  width: 220px;
+  width: 368px;
   text-align: left;
   left: 0;
   //transform: translate3d(-50%, 0, 0);
   top: 100%;
-  border-radius: 0 0 2px 2px;
-  //display: none;
+  border-radius: 8px;
+  display: none;
   visibility: hidden;
+  background: white;
 
   &.is-active {
     visibility: visible;
-    background: red;
   }
 
   &:focus,
@@ -486,20 +498,61 @@ $max-logo-width: 168px;
     visibility: visible;
   }
 
-  li + li {
-    margin: 8px 0 0 0!important;
+  li {
+    margin: 0 !important;
+
+    + li {
+      margin-top: 2px !important;
+    }
   }
 
-  a {
-    display: block;
+  .bold-link {
+    border-top: 1px solid #C4C4C4;
+    margin-top: 8px !important;
+    padding-top: 8px;
+    a {
+      font-weight: bold;
+    }
+  }
+  a,
+  li > span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px !important;
     height: auto !important;
     justify-content: flex-start !important;
-    padding: 8px 4px;
-    color: $white;
+    padding: 4px !important;
+    color: $black !important;
     transition: opacity $trans;
+
+    img {
+      max-width: 88px;
+      margin-left: 6px;
+    }
+
+    &:before,
+    &:after {
+      display: none !important;
+    }
 
     &:hover {
       opacity: 0.6;
+    }
+  }
+
+  li > span {
+    cursor: default !important;
+
+    &:hover {
+      opacity: 1 !important;
+      cursor: default !important;
+    }
+  }
+
+  li.is-active {
+    a {
+      opacity: .6;
     }
   }
 }

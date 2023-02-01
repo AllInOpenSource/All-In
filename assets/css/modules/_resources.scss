@@ -1,0 +1,137 @@
+// ---------------------------------------------------------------------
+//
+// ---------------------------------------------------------------------
+
+.resource-group {
+  padding-top: 24px;
+  border-top: 1px solid #C4C4C4;
+  margin-bottom: 24px;
+}
+
+.resource-list {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li:nth-child(2n + 1) {
+    background: #E9E9E9;
+  }
+}
+.resource {
+  padding: 16px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  figure {
+    width: 24px;
+    min-width: 24px;
+
+    svg {
+      display: block;
+    }
+  }
+
+  h4 {
+    flex-grow: 1;
+    font-size: 14px;
+    margin: 0 12px;
+    font-weight: normal;
+
+    @include start-at($large) {
+      font-size: 16px;
+      margin: 0 16px;
+    }
+  }
+
+  a {
+    display: block;
+    text-align: right;
+    min-width: 48px;
+    font-size: 16px;
+    text-decoration: underline;
+    transition: opacity $trans;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+// ----------------------------------------
+//
+// ----------------------------------------
+
+.topics-wrap {
+
+  @media (min-height: 800px) and (min-width: $medium) {
+    position: sticky;
+    top: 88px;
+  }
+}
+
+.topic {
+  margin-bottom: 8px;
+
+  .arrow-link {
+    margin-bottom: 4px;
+    font-size: 20px;
+    transition: color $trans;
+    font-weight: 400;
+
+    svg {
+      opacity: 0;
+      transition: opacity $trans, transform $trans;
+      fill: currentColor;
+
+      * {
+        fill: currentColor;
+      }
+    }
+
+    &:hover {
+      color: $blue;
+
+      svg {
+        opacity: 1;
+      }
+    }
+    &.is-active {
+      color: $blue;
+      font-weight: bold;
+
+      svg {
+        opacity: 1;
+      }
+    }
+  }
+
+  ul {
+    display: none;
+    border-left: 1px solid #1F44D2;
+    font-size: 16px;
+    padding-left: 24px;
+
+    li + li {
+      margin-top: 4px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 4px 0;
+      transition: opacity $trans;
+      text-transform: capitalize;
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .is-active {
+
+  }
+
+
+}

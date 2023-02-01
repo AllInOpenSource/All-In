@@ -104,3 +104,10 @@ picture > * {
 ::-moz-selection {
   @include selection;
 }
+
+hr {
+  border: none;
+  height: 1px;
+  background: #c4c4c4;
+  
+}

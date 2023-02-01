@@ -1,0 +1,222 @@
+---
+layout: default
+id: resources
+permalink: /community/DEI-resources/
+title: DEI Resource Hub
+---
+
+<div class="hero hero--short">
+  <div class="hero__content text-white">
+    <div class="wrapper">
+      <div class="d-md-flex text-center text-left-md">
+        <div class="col-12 col-md-4 mb-6 mb-md-0 px-md-6" data-animate-in="up">
+          <img class="" src="{{ '/assets/img/direction/programs/dei.svg' | relative_url }}" alt="All In for Maintainers DEI Resource Hub" />
+        </div>
+        <div class="col-12 col-md-8 col-lg-7" data-animate-in="up">
+          <h2 class="h2">DEI Resource Hub</h2>
+          <p>The All In for Maintainers DEI Resource Hub is a highly curated and searchable list of current and relevant DEI best practices, training material, research and trends for open source maintainers.</p>
+          <p>The DEI Resource Hub seeks to provide a digital archive of currently available and newly created open source specific DEI resources from various organizations, thought leaders and researchers.</p>
+
+          <div class="d-flex flex-wrap btns mt-6 d-none">
+            <a class="btn btn--scroll btn--full-sm mr-3" href="#about-the-tour" data-scroll-to="maintainers-listening-tour">
+              <span>About the All In for Maintainers Listening Tour</span>
+              {% include arrow.html %}
+            </a>
+            <a class="btn btn--scroll btn--full-sm" href="#about-the-program" data-scroll-to="about-the-program">
+              <span>About the All in for Maintainers Pilot</span>
+              {% include arrow.html %}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="bg-white bg-pattern-left py-8 wrapper-fulls" id="maintainers-listening-tour">
+  <div class="wrapper d-md-flex flex-justify-between">
+    <div class="col-12 col-md-4 pr-md-4 mb-6 mb-md-0" data-animate-in="up">
+      <div class="rte">
+        <h2 class="h3 mb-4">Why are we developing this resource?</h2>
+      </div>
+    </div>
+    <div class="col-12 col-md-8 pl-md-4 pl-lg-2" data-animate-in="up">
+      <p>At the conclusion of the <a href="https://www.linuxfoundation.org/research/the-2021-linux-foundation-report-on-diversity-equity-and-inclusion-in-open-source" target="_blank">DEI in Open Source</a> and <a href="{{ '/community/maintainers-listening-tour/' | relative_url }}">Maintainers Listening Tour</a>, one of the most common challenges we heard from maintainers was not knowing where to start. They are overwhelmed by the number of DEI resources available and want a website or repo where they can find a starting point for highly vetted resources in one place.</p>
+
+      <p>Recognizing that people consume content in different ways, the DEI Resource Hub offers videos, articles, research, and training courses covering topics often cited to advance DEI in open source communities.</p>
+
+      <blockquote class="my-5 px-4 px-lg-6">
+        <q class="h3">The number of DEI resources we have is overwhelming. We wish there was a website or repo where we could go to get all of the resources in one place.</q>
+        <img src="{{ '/assets/img/direction/icons/orb-blue.svg' | relative_url }}" alt="blue orb" />
+      </blockquote>
+
+      <p>The All In for Maintainers DEI Resource Hub is a solution to begin building solutions to solve the pain points maintainers have identified as blocks in their journey of learning how to create more diverse and inclusive open source communities.</p>
+    </div>
+  </div>
+
+
+  <div class="wrapper d-md-flex flex-justify-between py-8">
+    <div class="col-12 col-md-4 pr-md-4 mb-6 mb-md-0" data-animate-in="up">
+      <div class="topics-wrap d-none d-lg-block">
+        <h2 class="h3 mb-4">Browse by topic</h2>
+
+        <nav class="topics">
+          {% for group in site.data.resources %}
+          {% assign slug = group.group|slugify %}
+          <div class="topic">
+            <a class="arrow-link" href="#{{slug}}" data-topic="{{slug}}">
+    					<span>{{ group.group }}</span>
+    					{% include arrow.html %}
+      			</a>
+            <ul>
+              {% for tag in group.tags %}
+              <li>
+                <a href="{{ tag.tag }}" data-topic="{{slug}}" target="_blank">{{ tag.tag }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+          {% endfor %}
+        </nav>
+
+        <script>
+          var $ = jQuery;
+          var topic = $('.topic .arrow-link');
+          var topicUl = $('.topic ul');
+
+          $( ".topic:first-of-type .arrow-link" ).addClass('is-active');
+          $( ".topic:first-of-type ul" ).slideDown();
+
+          topic.click(function(e){
+            e.preventDefault();
+
+            topic.removeClass('is-active');
+            $('.topic ul').slideUp();
+
+            let el = $(this);
+            let target = el.attr('data-topic');
+            el.addClass('is-active');
+            target = $('#'+ target);
+            let list = el.next('ul');
+            list.slideDown();
+
+            $('html, body').animate({
+              scrollTop: target.offset().top - 24
+            }, 800);
+          });
+
+          topicUl.click(function(e){
+            e.preventDefault();
+            let el = $(this).parents('.topic').find('.arrow-link');
+            let target = el.attr('data-topic');
+            target = $('#'+ target);
+            $('html, body').animate({
+              scrollTop: target.offset().top - 24
+            }, 800);
+          });
+        </script>
+      </div>
+    </div>
+
+    <div class="col-12 col-md-8 pl-md-4 pl-lg-2" data-animate-in="up">
+      <p class="mb-6">Explore key maintainer focused DEI resources by topic.</p>
+      {% for group in site.data.resources %}
+      {% assign slug = group.group|slugify %}
+      <div class="resource-group" id="{{slug}}">
+          <h3 class="h4 mb-4">{{ group.group }}</h3>
+          <ul class="resource-list">
+            {% for resource in group.resources %}
+            {% assign type = resource.type | downcase %}
+            <li class="resource">
+              <figure>
+                {% if type == 'watch' %}
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_867_3153)">
+                  <path d="M10 0C8.62607 0 7.33022 0.261818 6.11241 0.785463C4.89461 1.30911 3.83295 2.02422 2.9274 2.93083C2.02185 3.83744 1.30757 4.89644 0.784543 6.10785C0.261512 7.31927 0 8.61273 0 9.98828C0 11.3795 0.261512 12.6807 0.784543 13.8921C1.30757 15.1036 2.02185 16.1626 2.9274 17.0692C3.83295 17.9758 4.89461 18.6909 6.11241 19.2145C7.33022 19.7382 8.62607 20 10 20C11.3739 20 12.6698 19.7382 13.8876 19.2145C15.1054 18.6909 16.1671 17.9758 17.0726 17.0692C17.9781 16.1626 18.6924 15.1036 19.2155 13.8921C19.7385 12.6807 20 11.3795 20 9.98828C20 8.61273 19.7385 7.31927 19.2155 6.10785C18.6924 4.89644 17.9781 3.83744 17.0726 2.93083C16.1671 2.02422 15.1054 1.30911 13.8876 0.785463C12.6698 0.261818 11.3739 0 10 0ZM8.00937 6.00234L14.0047 9.98828L8.00937 13.9977V6.00234Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_867_3153">
+                  <rect width="20" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+
+                {% endif %}
+                {% if type == 'listen' %}
+                <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_867_3135)">
+                  <path d="M7 12.0047C7.82721 12.0047 8.53344 11.7116 9.11873 11.1254C9.70402 10.5393 9.99665 9.83197 9.99665 9.00352V3.00117C9.99665 2.17272 9.70402 1.46542 9.11873 0.879249C8.53344 0.29308 7.82721 0 7 0C6.17279 0 5.46656 0.29308 4.88127 0.879249C4.29598 1.46542 4.00334 2.17272 4.00334 3.00117V9.00352C4.00334 9.83197 4.29598 10.5393 4.88127 11.1254C5.46656 11.7116 6.17279 12.0047 7 12.0047ZM11.9866 9.00352C11.9866 9.69129 11.8579 10.3361 11.6003 10.9379C11.3428 11.5397 10.9877 12.0672 10.5351 12.5205C10.0825 12.9738 9.55184 13.3333 8.94314 13.5991C8.33444 13.8648 7.68674 13.9977 7 13.9977C6.31326 13.9977 5.66555 13.8648 5.05686 13.5991C4.44816 13.3333 3.9175 12.9738 3.46488 12.5205C3.01226 12.0672 2.65719 11.5397 2.39967 10.9379C2.14214 10.3361 2.01338 9.69129 2.01338 9.00352H0C0 9.87886 0.156074 10.7073 0.468227 11.4889C0.780381 12.2704 1.20568 12.9699 1.74415 13.5873C2.28261 14.2048 2.91471 14.7167 3.64047 15.1231C4.36622 15.5295 5.1505 15.7952 5.99331 15.9203V20H8.00669V15.9203C8.8495 15.7952 9.63378 15.5295 10.3595 15.1231C11.0853 14.7167 11.7174 14.2048 12.2559 13.5873C12.7943 12.9699 13.2196 12.2704 13.5318 11.4889C13.8439 10.7073 14 9.87886 14 9.00352H11.9866Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_867_3135">
+                  <rect width="14" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+                {% endif %}
+                {% if type == 'read' %}
+                <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g clip-path="url(#clip0_867_3145)">
+                  <path d="M11.0029 0V4.99414H16L11.0029 0ZM9.99413 5.76788V0H0.985337C0.719452 0 0.488759 0.0976931 0.293255 0.293083C0.0977504 0.488473 0 0.71903 0 0.98476V18.9918C0 19.2732 0.0977504 19.5115 0.293255 19.7069C0.488759 19.9023 0.719452 20 0.985337 20H15.0147C15.2805 20 15.5112 19.9023 15.7067 19.7069C15.9022 19.5115 16 19.2732 16 18.9918V6.00234H9.99413V5.76788ZM6.9912 13.7163L5.46628 15.0059L3.00293 12.0047L5.46628 9.00352L6.9912 10.2696L5.58358 12.0047L6.9912 13.7163ZM10.5337 9.00352L12.9971 12.0047L10.5337 15.0059L9.0088 13.7163L10.4164 12.0047L9.0088 10.2696L10.5337 9.00352Z" fill="black"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_867_3145">
+                  <rect width="16" height="20" fill="white"/>
+                  </clipPath>
+                  </defs>
+                </svg>
+
+                {% endif %}
+              </figure>
+
+              <h4>{{ resource.title }}</h4>
+
+              <a href="{{ resource.url }}" data-topic="{{slug}}" target="_blank">
+                {{ resource.type }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+      </div>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+<section class="wrapper-full bg-static py-8">
+  <div class="wrapper-md2 text-white text-centers" data-animate-in="up">
+
+    <div class="rte">
+
+
+      <h2 class="h1">How can I get involved?</h2>
+
+      <p class="p-lg">The resources included in the DEI Resource Hub were collected in a collaborative manner from maintainers, community leaders, researchers, open source thought leaders, and culled from industry organizations and open source projects leading in this work.</p>
+
+      <p>In this process of co-creation and resource sharing, we intend to ensure that this hub does not become stale. We want to continue expanding the conversations, research, tools, and data that will evolve as the needs of maintainers and open source communities progress. And that's where you come in!</p>
+
+      <h4 class="h4">Here’s how you can get involved:</h4>
+
+      <ul>
+        <li>Do you have DEI content to share? <a class="link" href="{{ '/share-your-resources/' | relative_url }}">Please submit it by filling out the DEI Content Submission Form.</a></li>
+        <li>Spread the word by sharing your favorite DEI Resource on Twitter and tag <a href="https://twitter.com/AllInOpenSource" target="_blank">@allinopensource</a>.</li>
+      </ul>
+
+      <p>By working together with you, we can collectively ensure everyone has access to the tools needed to champion inclusive and diverse spaces in open source. And by doing so, we hope to build upon the initial tenets of open source by fostering collaboration and creating a more diverse and inclusive open source community together.</p>
+
+
+      <p>Continue to check our website and <a href="https://github.com/AllInOpenSource/All-In/issues/allinopensource.org" target="_blank">repo</a> for updates on iterations to the DEI Resource Hub and announcements on the next program to roll out.</p>
+    </div>
+
+
+    <div class="mt-5">
+      <a class="btn" href="{{ '/share-your-resources/' | relative_url }}">
+        <span>Share Your Resources</span>
+        {% include arrow.html %}
+      </a>
+    </div>
+  </div>
+</section>
