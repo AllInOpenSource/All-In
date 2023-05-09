@@ -24,12 +24,13 @@
     font-style: italic;
     font-weight: 400;
     font-size: 14px;
-    color: #61636A;
+    opacity: 0.6;
   }
 }
 
 .row--img-icons {
-  > * {
+
+  .orb-wrap {
     position: relative;
     z-index: 1;
   }
