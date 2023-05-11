@@ -9,7 +9,7 @@
 
 [Project name] has reflected on DEI related to:
 
-1. [Project Access]()
+1. [Project Access](https://chaoss.community/?p=4953)
 * Description of how your project addresses project access. A sample description is: 
     * Project access is addressed in the &lt;<Project>> through a variety of different efforts. Through these efforts, we aim to support access for all. Specific efforts in our project include: 
         1. All virtual meetings are transcribed via the Zoom annotation tool and members are able to join via their computer or phone. Video is not required to participate in virtual meetings.
