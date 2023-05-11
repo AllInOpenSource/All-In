@@ -1,11 +1,13 @@
-# DRAFT
+# Disclaimer: This is currently a Pilot Program and this file may change based on the results and feedback.
 
-# Bronze DEI Project Statement
+# DEI Project Statement
 
 ### _Include Your Project Name/Logo Here_
-### _Include Awarded Badge Here_
 
-[project name] prioritizes and reflects on DEI through a regular review of project policies and performance based on CHAOSS project DEI metrics. [Project name] has reflected on DEI related to:
+
+[project name] prioritizes and reflects on DEI through a regular review of project policies and performance based on the ever-evolving [CHAOSS project](https://chaoss.community) DEI metrics and information in the [All In DEI Resource Hub](https://allinopensource.org/maintainers/DEI-resources/). 
+
+[Project name] has reflected on DEI related to:
 
 1. [Project Access]()
 * Description of how your project addresses project access. A sample description is: 
