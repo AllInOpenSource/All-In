@@ -49,15 +49,14 @@
 					</li>
 
 					<li{% if page.id == 'badging' %} class="is-active"{% endif %}>
-						<span>
+						<a href="{{ '/maintainers/DEI-badging/' | relative_url }}">
 							<span>DEI Project Badging</span>
-							<img src="{{ '/assets/img/direction/programs/coming-soon.svg' | relative_url }}" alt="Coming soon" />
-						</span>
+						</a>
 					</li>
 
 					<li{% if page.id == 'creators' %} class="is-active"{% endif %}>
 						<span>
-							<span>DEI  Content Creators</span>
+							<span>DEI Content Creators</span>
 							<img src="{{ '/assets/img/direction/programs/coming-soon.svg' | relative_url }}" alt="Coming soon" />
 						</span>
 					</li>
@@ -137,6 +136,12 @@
 					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
 						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
 							<span>DEI Resource Hub</span>
+						</a>
+					</li>
+
+					<li{% if page.id == 'badging' %} class="is-active"{% endif %}>
+						<a href="{{ '/maintainers/DEI-badging/' | relative_url }}">
+							<span>DEI Project Badging</span>
 						</a>
 					</li>
 
