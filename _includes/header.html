@@ -9,11 +9,26 @@
 		</div>
 
 		<ul class="desktop-navigation">
-			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+		
+			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'africa' %} is-parent{% endif %}">
 				<a href="{{ '/access/' | relative_url }}">
 					<span>Access</span>
 				</a>
+
+				<ul class="sub-nav sub-nav--sm">
+					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/' | relative_url }}">
+							<span>Overview</span>
+						</a>
+					</li>
+					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/africa/' | relative_url }}">
+							<span>Africa</span>
+						</a>
+					</li>
+				</ul>
 			</li>
+					
 			<li class="has-sub-nav {% if page.id == 'maintainers' or page.id == 'resources' or page.id == 'faq' or page.id == 'listening-tour' %} is-parent{% endif %}">
 				<a href="{{ '/maintainers/' | relative_url }}">
 					<span>Maintainers</span>
@@ -112,14 +127,14 @@
 		<nav class="navigation-drawer">
 			<div>
 				<ul class="mobile-navigation">
-					<li{% if page.id == 'home' %} class="is-active"{% endif %}>
-						<a href="/">
-							<span>Overview</span>
-						</a>
-					</li>
 					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 						<a href="/access/">
 							<span>Access</span>
+						</a>
+					</li>
+					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
+						<a href="/access/africa/">
+							<span>Africa</span>
 						</a>
 					</li>
 
@@ -170,11 +185,6 @@
 						</a>
 					</li>
 
-					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/africa' | relative_url }}">
-							<span>Africa</span>
-						</a>
-					</li>
 				</ul>
 
 				<div>
