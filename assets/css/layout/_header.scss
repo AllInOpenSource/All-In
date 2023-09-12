@@ -489,6 +489,11 @@ $max-logo-width: 168px;
   visibility: hidden;
   background: white;
 
+  &.sub-nav--sm {
+    width: 220px;
+    padding: 18px;
+  }
+  
   &.is-active {
     visibility: visible;
   }
