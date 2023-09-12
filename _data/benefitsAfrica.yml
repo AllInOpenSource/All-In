@@ -1,0 +1,23 @@
+- title: Education
+  image: education.svg
+  description: Advance your technical skills with free access to open source courses and training curriculum.
+
+- title: Technical Training
+  image: training.svg
+  description: Gain hands-on experience through virtual and in-person hackathons.
+
+- title: Mentoring & Networking
+  image: networking.svg
+  description: Meet with software developers, engineers, and other tech professionals and network with students from other schools throughout the U.S.
+
+- title: Community & Collabortation
+  image: careers.svg
+  description: Access to a community of fellow open source enthusiasts and collaborating with them to work on and build cool open source projects that solve real-world problems. 
+
+- title: Scholarships
+  image: scholarships.svg
+  description: Access opportunities to apply for funding to attend bootcamps, conferences and participate in fellowships throughout the year.
+
+- title: Swag
+  image: swag.svg
+  description: Proudly wear your All In or partner-branded hoodies, socks, shirts, backpacks, and other swag you’ll receive by participating.
