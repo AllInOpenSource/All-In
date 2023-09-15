@@ -153,7 +153,7 @@ $max-logo-width: 168px;
   .has-sub-nav > div,
   > li > a {
     position: relative;
-    font-size: 14px;
+    font-size: 16px;
     color: currentColor;
     font-family: $sans-serif;
     font-weight: 500;
@@ -166,9 +166,8 @@ $max-logo-width: 168px;
     text-decoration: none;
 
     @include start-at(1600px) {
-      font-size: 16px;
+      font-size: 18px;
     }
-
   }
 
   li.is-active,
