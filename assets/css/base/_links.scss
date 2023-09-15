@@ -380,6 +380,7 @@ a:hover .icon-link.icon-link--static,
   align-items: center;
   font-weight: 500;
   font-size: 16px;
+  color: currentColor;
 
   svg {
     display: block;
@@ -389,6 +390,10 @@ a:hover .icon-link.icon-link--static,
     transition: transform $trans;
   }
 
+  svg * {
+    fill: currentColor;
+  }
+
   &:hover {
 
     svg {
@@ -396,6 +401,10 @@ a:hover .icon-link.icon-link--static,
     }
 
   }
+}
+
+.text-brand {
+  color: $brand !important;
 }
 
 
