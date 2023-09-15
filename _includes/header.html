@@ -21,6 +21,16 @@
 							<span>Overview</span>
 						</a>
 					</li>
+					<li class="bold-link">
+						<a href="{{ '/access/' | relative_url }}">
+							<span>Programs</span>
+						</a>
+					</li>
+					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
+						<a href="{{ '/access/students/' | relative_url }}">
+							<span>Students</span>
+						</a>
+					</li>
 					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
 						<a href="{{ '/access/africa/' | relative_url }}">
 							<span>Africa</span>
@@ -127,9 +137,14 @@
 							<span>Access</span>
 						</a>
 					</li>
+					<li{% if page.id == 'students' %} class="is-active"{% endif %}>
+						<a href="/access/students/">
+							<span>All in for Students</span>
+						</a>
+					</li>
 					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
 						<a href="/access/africa/">
-							<span>Africa</span>
+							<span>All in Africa</span>
 						</a>
 					</li>
 
