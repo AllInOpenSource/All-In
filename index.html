@@ -16,11 +16,6 @@ id: home
         </a>
       </div>
     </div>
-    <div class="hero-content__media" data-animate-in="up">
-      {% include video.html %}
-
-      <img class="orb" src="/assets/img/direction/orb-green.svg" alt="green orb" />
-    </div>
   </div>
 
   <img class="hero__pattern" src="{{ '/assets/img/direction/hero-pattern.svg' | relative_url }}" alt="curly bracket pattern" />
@@ -42,11 +37,6 @@ id: home
         {% include arrow.html %}
       </a>
     </div>
-  </div>
-
-  <div class="wrapper mt-7">
-    <h4 class="h3 mb-4 text-center pt-lg-6">Founding Partners</h4>
-    {% include logo-list.html %}
   </div>
 
   <img class="bg-pattern__img" src="{{ '/assets/img/direction/hero-pattern-light.svg' | relative_url }}" alt="curly bracket pattern" />
@@ -128,5 +118,11 @@ id: home
         <p>Our first initiative was to create the 2021 Open Source Diversity, Equity, and Inclusion Survey and partner with the Linux Foundation to survey across the open source ecosystem. View the final report <a href="https://www.linuxfoundation.org/research/the-2021-linux-foundation-report-on-diversity-equity-and-inclusion-in-open-source" target="_blank">here</a>. We are now collaborating with corporate partners to research inequities in computer science and other technical education programs.</p>
       </div>
     </div>
+
+    <div class="wrapper mt-7">
+      <h4 class="h3 mb-4 text-center pt-lg-6">Founding Partners</h4>
+      {% include logo-list.html %}
+    </div>
+  
   </div>
 </section>
