@@ -10,7 +10,7 @@
 
 		<ul class="desktop-navigation">
 		
-			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'africa' %} is-parent{% endif %}">
+			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'students' %} is-parent{% endif %}">
 				<a href="{{ '/access/' | relative_url }}">
 					<span>Access</span>
 				</a>
@@ -29,11 +29,6 @@
 					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 						<a href="{{ '/access/students/' | relative_url }}">
 							<span>Students</span>
-						</a>
-					</li>
-					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/africa/' | relative_url }}">
-							<span>Africa</span>
 						</a>
 					</li>
 				</ul>
@@ -92,15 +87,10 @@
 							<span>All in for Students</span>
 						</a>
 					</li>
-					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
-						<a href="/access/africa/">
-							<span>All in Africa</span>
-						</a>
-					</li>
 
 					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
 						<a href="{{ '/maintainers/' | relative_url }}">
-							<span>Maintainers</span>
+							<span>Community</span>
 						</a>
 					</li>
 
