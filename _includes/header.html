@@ -10,28 +10,10 @@
 
 		<ul class="desktop-navigation">
 		
-			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'students' %} is-parent{% endif %}">
+			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 				<a href="{{ '/access/' | relative_url }}">
 					<span>Access</span>
 				</a>
-
-				<ul class="sub-nav sub-nav--sm">
-					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/' | relative_url }}">
-							<span>Overview</span>
-						</a>
-					</li>
-					<li class="bold-link">
-						<a href="{{ '/access/' | relative_url }}">
-							<span>Programs</span>
-						</a>
-					</li>
-					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/students/' | relative_url }}">
-							<span>Students</span>
-						</a>
-					</li>
-				</ul>
 			</li>
 
 			<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
@@ -80,11 +62,6 @@
 					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 						<a href="/access/">
 							<span>Access</span>
-						</a>
-					</li>
-					<li{% if page.id == 'students' %} class="is-active"{% endif %}>
-						<a href="/access/students/">
-							<span>All in for Students</span>
 						</a>
 					</li>
 
