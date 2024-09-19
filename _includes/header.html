@@ -10,91 +10,16 @@
 
 		<ul class="desktop-navigation">
 		
-			<li class="has-sub-nav {% if page.id == 'access' or page.id == 'africa' %} is-parent{% endif %}">
+			<li{% if page.id == 'access' %} class="is-active"{% endif %}>
 				<a href="{{ '/access/' | relative_url }}">
 					<span>Access</span>
 				</a>
-
-				<ul class="sub-nav sub-nav--sm">
-					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/' | relative_url }}">
-							<span>Overview</span>
-						</a>
-					</li>
-					<li class="bold-link">
-						<a href="{{ '/access/' | relative_url }}">
-							<span>Programs</span>
-						</a>
-					</li>
-					<li{% if page.id == 'access' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/students/' | relative_url }}">
-							<span>Students</span>
-						</a>
-					</li>
-					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
-						<a href="{{ '/access/africa/' | relative_url }}">
-							<span>Africa</span>
-						</a>
-					</li>
-				</ul>
 			</li>
-					
-			<li class="has-sub-nav {% if page.id == 'maintainers' or page.id == 'resources' or page.id == 'faq' or page.id == 'listening-tour' %} is-parent{% endif %}">
+
+			<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
 				<a href="{{ '/maintainers/' | relative_url }}">
-					<span>Maintainers</span>
+					<span>Community</span>
 				</a>
-
-				<ul class="sub-nav">
-					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
-						<a href="{{ '/maintainers/' | relative_url }}">
-							<span>Overview</span>
-						</a>
-					</li>
-					<li{% if page.id == 'listening-tour' %} class="is-active"{% endif %}>
-						<a href="{{ '/maintainers/maintainers-listening-tour/' | relative_url }}">
-							<span>Maintainers Listening Tour</span>
-						</a>
-					</li>
-					<li{% if page.id == 'faq' %} class="is-active"{% endif %}>
-						<a href="{{ '/faq/' | relative_url }}">
-							<span>FAQs</span>
-						</a>
-					</li>
-
-					<li class="bold-link">
-						<a href="{{ '/maintainers/#programs' | relative_url }}">
-							<span>Programs</span>
-						</a>
-					</li>
-
-					<li{% if page.id == 'resources' %} class="is-active"{% endif %}>
-						<a href="{{ '/maintainers/DEI-resources/' | relative_url }}">
-							<span>DEI Resource Hub</span>
-						</a>
-					</li>
-
-					<li{% if page.id == 'badging' %} class="is-active"{% endif %}>
-						<a href="https://badging.chaoss.community">
-							<span>DEI Badging Program</span>
-						</a>
-					</li>
-
-					<li{% if page.id == 'community' %} class="is-active"{% endif %}>
-						<a href="{{ '/maintainers/community-collaboration/' | relative_url }}">
-							<span>Community Collaboration Hub</span>
-						</a>
-					</li>
-
-					<li{% if page.id == 'creators' %} class="is-active"{% endif %}>
-						<span>
-							<span>DEI Content Creators</span>
-							<img src="{{ '/assets/img/direction/programs/coming-soon.svg' | relative_url }}" alt="Coming soon" />
-						</span>
-					</li>
-
-
-
-				</ul>
 			</li>
 
 			<li{% if page.id == 'equity' %} class="is-active"{% endif %}>
@@ -139,20 +64,10 @@
 							<span>Access</span>
 						</a>
 					</li>
-					<li{% if page.id == 'students' %} class="is-active"{% endif %}>
-						<a href="/access/students/">
-							<span>All in for Students</span>
-						</a>
-					</li>
-					<li{% if page.id == 'africa' %} class="is-active"{% endif %}>
-						<a href="/access/africa/">
-							<span>All in Africa</span>
-						</a>
-					</li>
 
 					<li{% if page.id == 'maintainers' %} class="is-active"{% endif %}>
 						<a href="{{ '/maintainers/' | relative_url }}">
-							<span>Maintainers</span>
+							<span>Community</span>
 						</a>
 					</li>
 
